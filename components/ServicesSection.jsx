@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { SERVICES } from '@/data/siteData';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { Check, ArrowUpRight } from 'lucide-react';
 
 export default function ServicesSection() {
   const [activeIdx, setActiveIdx] = useState(0);
@@ -13,8 +14,14 @@ export default function ServicesSection() {
     <section className="py-16 sm:py-24 relative bg-[#fafafa]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
-        {/* Section Header */}
-        <div className="mb-10 sm:mb-12">
+        {/* Section Header with Scroll-Up Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="mb-10 sm:mb-12"
+        >
           <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-3">
             <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
             <span>Services</span>
@@ -24,13 +31,19 @@ export default function ServicesSection() {
             From idea to scale. <br />
             <span className="text-[#64748b] font-medium">We master our craft with relentless precision.</span>
           </h2>
-        </div>
+        </motion.div>
 
         {/* 2-Column Services Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* Left Column: Interactive Service Selectors */}
-          <div className="lg:col-span-5 space-y-2.5">
+          {/* Left Column: Interactive Service Selectors with Scroll-Up Animation */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="lg:col-span-5 space-y-2.5"
+          >
             {SERVICES.map((service, idx) => {
               const isActive = activeIdx === idx;
               return (
@@ -61,17 +74,23 @@ export default function ServicesSection() {
                 </button>
               );
             })}
-          </div>
+          </motion.div>
 
-          {/* Right Column: Active Service Visual Preview */}
-          <div className="lg:col-span-7">
+          {/* Right Column: Active Service Visual Preview with Scroll-Up Animation */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="lg:col-span-7"
+          >
             <div className="p-3 rounded-3xl bg-white border border-zinc-200 shadow-lg">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeIdx}
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
+                  exit={{ opacity: 0, y: -12 }}
                   transition={{ duration: 0.3 }}
                   className="rounded-2xl overflow-hidden bg-zinc-900"
                 >
@@ -90,19 +109,29 @@ export default function ServicesSection() {
                       <p className="text-xs text-zinc-300 mb-4 max-w-md leading-relaxed">
                         {activeService.description}
                       </p>
-                      <div className="flex flex-wrap gap-2">
-                        {activeService.tags.map((t) => (
-                          <span key={t} className="px-2.5 py-0.5 rounded-full bg-white/20 text-[11px] backdrop-blur-sm">
-                            {t}
-                          </span>
-                        ))}
+                      <div className="flex items-center justify-between mt-4">
+                        <div className="flex flex-wrap gap-2">
+                          {activeService.tags.map((t) => (
+                            <span key={t} className="px-2.5 py-0.5 rounded-full bg-white/20 text-[11px] backdrop-blur-sm">
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+
+                        <Link
+                          href={`/services/${activeService.slug}`}
+                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white text-black text-xs font-semibold hover:bg-zinc-100 transition-all shadow-md active:scale-95"
+                        >
+                          <span>Explore Service</span>
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </Link>
                       </div>
                     </div>
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
-          </div>
+          </motion.div>
 
         </div>
 

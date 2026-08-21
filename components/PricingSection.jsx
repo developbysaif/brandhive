@@ -13,8 +13,14 @@ export default function PricingSection() {
     <section className="py-16 sm:py-24 relative bg-[#fafafa]" id="pricing">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        {/* Header with Scroll-Up Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="text-center max-w-2xl mx-auto mb-12 sm:mb-16"
+        >
           <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-3">
             <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
             <span>Pricing</span>
@@ -24,18 +30,19 @@ export default function PricingSection() {
             Choose a plan. <br />
             <span className="text-[#64748b] font-medium">That fits your needs.</span>
           </h2>
-        </div>
+        </motion.div>
 
-        {/* 3 Pricing Cards */}
+        {/* 3 Pricing Cards with Staggered Scroll-Up Animation */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch mb-10">
-          {PRICING_PLANS.map((plan) => {
+          {PRICING_PLANS.map((plan, idx) => {
             const isDark = plan.id === 'enterprise';
             return (
               <motion.div
                 key={plan.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: idx * 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
                 className={`relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                   isDark
                     ? 'bg-[#09090b] text-white shadow-xl border border-zinc-800'
@@ -108,7 +115,13 @@ export default function PricingSection() {
         </div>
 
         {/* Below Pricing: Testimonial Card + Dark Callout Box */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch"
+        >
           
           {/* Left Review Card */}
           <div className="md:col-span-7 p-7 rounded-3xl bg-white border border-zinc-200 shadow-sm flex flex-col justify-between">
@@ -166,7 +179,7 @@ export default function PricingSection() {
             </div>
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
     </section>

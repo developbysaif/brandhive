@@ -5,6 +5,7 @@ import FaqSection from '@/components/FaqSection';
 import CtaBanner from '@/components/CtaBanner';
 import { Send, CheckCircle2, AlertCircle, Loader2, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -107,12 +108,16 @@ export default function ContactPage() {
     <div className="pt-28 md:pt-36 bg-[#fafafa]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-20 md:mb-28">
         
-        {/* Contact Layout: Left Info & Right Form */}
+        {/* Contact Layout: Left Info & Right Form with Scroll-Up Animation */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           
           {/* Left Column: Heading & Dark Info Card */}
-          <div className="lg:col-span-5 flex flex-col justify-start lg:sticky lg:top-36">
-            
+          <motion.div
+            initial={{ opacity: 0, y: 35 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="lg:col-span-5 flex flex-col justify-start lg:sticky lg:top-36"
+          >
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-[54px] font-bold tracking-tight text-zinc-900 leading-[1.1] mb-4">
               Get in <br />
@@ -162,11 +167,15 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-
-          </div>
+          </motion.div>
 
           {/* Right Column: Complete White Form Card */}
-          <div className="lg:col-span-7">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="lg:col-span-7"
+          >
             <div className="bg-white rounded-[32px] sm:rounded-[40px] border border-zinc-200/90 p-6 sm:p-8 md:p-10 shadow-[0_16px_50px_rgba(0,0,0,0.04)]">
               
               {/* Status Message Notification */}
@@ -414,7 +423,7 @@ export default function ContactPage() {
               </form>
 
             </div>
-          </div>
+          </motion.div>
 
         </div>
 

@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function CtaBanner() {
   const brandLogos = [
@@ -47,7 +48,14 @@ export default function CtaBanner() {
     <section className="py-16 sm:py-24 relative bg-[#fafafa]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
-        <div className="rounded-[36px] sm:rounded-[44px] bg-white border border-zinc-200/90 p-8 sm:p-14 md:p-20 text-center shadow-[0_8px_40px_rgba(0,0,0,0.03)]">
+        {/* Banner Card with Scroll-Up Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="rounded-[36px] sm:rounded-[44px] bg-white border border-zinc-200/90 p-8 sm:p-14 md:p-20 text-center shadow-[0_8px_40px_rgba(0,0,0,0.03)]"
+        >
           <div className="max-w-2xl mx-auto flex flex-col items-center">
             
             {/* Headline */}
@@ -97,7 +105,7 @@ export default function CtaBanner() {
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

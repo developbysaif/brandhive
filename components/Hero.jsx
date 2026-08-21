@@ -182,7 +182,7 @@ export default function Hero() {
       </div>
 
       {/* Center Hero Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="flex flex-col items-center text-center">
           
           {/* Open for Work Pill */}
@@ -286,15 +286,15 @@ export default function Hero() {
 
         </div>
 
-        {/* Large AI Hardware Showcase Mockup Slider */}
+        {/* Large AI Hardware Showcase Mockup Slider (Larger & Prominent Size) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="rounded-[32px] overflow-hidden bg-white border border-zinc-200 shadow-[0_20px_50px_rgba(0,0,0,0.06)] p-2.5 mb-6 sm:mb-8 relative group select-none"
+          className="rounded-[32px] sm:rounded-[44px] overflow-hidden bg-white border border-zinc-200/90 shadow-[0_24px_60px_rgba(0,0,0,0.08)] p-2.5 sm:p-3.5 mb-8 sm:mb-10 relative group select-none"
         >
           <div
-            className="rounded-[24px] overflow-hidden relative aspect-[16/9] sm:aspect-[21/10] bg-zinc-950"
+            className="rounded-[24px] sm:rounded-[36px] overflow-hidden relative aspect-[16/11] sm:aspect-[16/9] md:aspect-[21/11] min-h-[340px] sm:min-h-[460px] md:min-h-[540px] lg:min-h-[580px] bg-zinc-950"
             onMouseEnter={() => setIsHeroSliderPaused(true)}
             onMouseLeave={() => setIsHeroSliderPaused(false)}
           >
@@ -313,62 +313,48 @@ export default function Hero() {
             </AnimatePresence>
 
             {/* Top Left Project Name Badge */}
-            <div className="absolute top-4 sm:top-5 left-4 sm:left-5 flex items-center gap-2 z-20">
-              <span className="px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-semibold border border-white/10 shadow-sm transition-all">
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 flex items-center gap-2 z-20">
+              <span className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md text-white text-xs sm:text-sm font-semibold border border-white/15 shadow-sm transition-all">
                 {heroSlides[heroSlideIdx].title}
               </span>
             </div>
 
             {/* Top Right View Project Button */}
-            <div className="absolute top-4 sm:top-5 right-4 sm:right-5 z-20">
+            <div className="absolute top-4 sm:top-6 right-4 sm:right-6 z-20">
               <Link
                 href={`/projects/${heroSlides[heroSlideIdx].slug}`}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-black text-xs font-semibold hover:bg-zinc-100 transition-all shadow-md hover:scale-105"
+                className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white text-black text-xs sm:text-sm font-semibold hover:bg-zinc-100 transition-all shadow-md hover:scale-105"
               >
                 <span>View Project</span>
-                <ArrowUpRight className="w-3 h-3" />
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
-            {/* Previous Slide Button */}
-            <button
-              type="button"
-              onClick={() => setHeroSlideIdx((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
-              className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/40 hover:bg-black/80 backdrop-blur-md text-white border border-white/15 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 z-20 shadow-md active:scale-95"
-              aria-label="Previous slide"
-            >
-              <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
-            </button>
-
-            {/* Next Slide Button */}
-            <button
-              type="button"
-              onClick={() => setHeroSlideIdx((prev) => (prev + 1) % heroSlides.length)}
-              className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/40 hover:bg-black/80 backdrop-blur-md text-white border border-white/15 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 z-20 shadow-md active:scale-95"
-              aria-label="Next slide"
-            >
-              <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </button>
-
-            {/* Bottom Slider Indicator Dots */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/10">
-              {heroSlides.map((slide, idx) => (
-                <button
-                  key={slide.slug}
-                  type="button"
-                  onClick={() => setHeroSlideIdx(idx)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    heroSlideIdx === idx
-                      ? 'w-6 bg-white shadow-sm'
-                      : 'w-1.5 bg-white/40 hover:bg-white/70'
-                  }`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
+            {/* Bottom Preview Image Thumbnails matching screenshot */}
+            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 flex items-center gap-2 sm:gap-3.5 z-20">
+              {heroSlides.map((slide, idx) => {
+                const isActive = heroSlideIdx === idx;
+                return (
+                  <button
+                    key={slide.slug}
+                    type="button"
+                    onClick={() => setHeroSlideIdx(idx)}
+                    className={`relative w-16 sm:w-24 md:w-28 aspect-[16/10] rounded-[14px] sm:rounded-[18px] overflow-hidden transition-all duration-300 cursor-pointer ${
+                      isActive
+                        ? 'border-2 border-white ring-2 ring-black/40 shadow-2xl scale-105 opacity-100 z-10'
+                        : 'border border-white/25 opacity-45 hover:opacity-95 hover:scale-[1.03] bg-black/40 backdrop-blur-sm'
+                    }`}
+                    aria-label={`Select ${slide.title}`}
+                  >
+                    <img
+                      src={slide.image}
+                      alt={slide.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className={`absolute inset-0 transition-colors ${isActive ? 'bg-transparent' : 'bg-black/20'}`} />
+                  </button>
+                );
+              })}
             </div>
 
           </div>

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Footer() {
   const [newsletterEmail, setNewsletterEmail] = useState('');
@@ -21,8 +22,14 @@ export default function Footer() {
     <footer className="border-t border-zinc-200/80 bg-[#fafafa] pt-16 sm:pt-20 pb-10 overflow-hidden relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Top Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 sm:gap-12 mb-12 sm:mb-16">
+        {/* Top Info Grid with Scroll-Up Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="grid grid-cols-1 md:grid-cols-12 gap-10 sm:gap-12 mb-12 sm:mb-16"
+        >
           
           {/* Brand & Newsletter Column */}
           <div className="md:col-span-6 space-y-4">
@@ -89,6 +96,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/team" className="hover:text-black transition-colors">
+                  Team
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact-us" className="hover:text-black transition-colors">
                   Contact us
                 </Link>
@@ -129,14 +141,20 @@ export default function Footer() {
             </ul>
           </div>
 
-        </div>
+        </motion.div>
 
-        {/* Giant Watermark from screenshot */}
-        <div className="select-none pointer-events-none my-6 sm:my-8 overflow-hidden">
+        {/* Giant Watermark with Scroll-Up Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="select-none pointer-events-none my-6 sm:my-8 overflow-hidden"
+        >
           <span className="text-[16vw] font-black tracking-tighter text-zinc-200/60 leading-none block text-center">
             Lamosa<span className="text-[#ea580c]/30">.</span>
           </span>
-        </div>
+        </motion.div>
 
         {/* Bottom Bar */}
         <div className="pt-6 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-normal">

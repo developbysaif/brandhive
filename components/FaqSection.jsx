@@ -19,8 +19,14 @@ export default function FaqSection() {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
-          {/* Left Column: Title & Dark CTA Box */}
-          <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-8">
+          {/* Left Column: Title & Dark CTA Box with Scroll-Up Animation */}
+          <motion.div
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="lg:col-span-5 flex flex-col justify-between h-full space-y-8"
+          >
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-3">
                 <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
@@ -54,10 +60,16 @@ export default function FaqSection() {
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Right Column: Clean White Accordion List */}
-          <div className="lg:col-span-7 space-y-3">
+          {/* Right Column: Clean White Accordion List with Scroll-Up Animation */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="lg:col-span-7 space-y-3"
+          >
             {FAQ_ITEMS.map((faq, index) => {
               const isOpen = openIndex === index;
               return (
@@ -99,7 +111,7 @@ export default function FaqSection() {
                 </div>
               );
             })}
-          </div>
+          </motion.div>
 
         </div>
 

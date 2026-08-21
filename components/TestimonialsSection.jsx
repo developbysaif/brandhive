@@ -4,19 +4,25 @@ import React from 'react';
 import { TESTIMONIALS } from '@/data/siteData';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function TestimonialsSection() {
   const card1 = TESTIMONIALS[0];
   const card2 = TESTIMONIALS[1];
   const card3 = TESTIMONIALS[2];
-  const card4 = TESTIMONIALS[3];
 
   return (
     <section className="py-16 sm:py-24 relative bg-[#fafafa]" id="testimonials">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        {/* Section Header with Scroll-Up Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="text-center max-w-2xl mx-auto mb-12 sm:mb-16"
+        >
           <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-3">
             <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
             <span>Testimonials</span>
@@ -26,17 +32,29 @@ export default function TestimonialsSection() {
             We're loved. <br />
             <span className="text-[#64748b] font-medium">Just success stories.</span>
           </h2>
-        </div>
+        </motion.div>
 
-        {/* Bento Grid inside Outer Frame */}
-        <div className="rounded-[32px] sm:rounded-[44px] bg-white border border-zinc-200/80 p-6 sm:p-8 md:p-10 shadow-[0_8px_40px_rgba(0,0,0,0.03)]">
+        {/* Bento Grid inside Outer Frame with Scroll-Up Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="rounded-[32px] sm:rounded-[44px] bg-white border border-zinc-200/80 p-6 sm:p-8 md:p-10 shadow-[0_8px_40px_rgba(0,0,0,0.03)]"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
             
             {/* Left Column */}
             <div className="flex flex-col gap-6">
               
               {/* Card 1: 2.3x */}
-              <div className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-zinc-300 transition-all">
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-zinc-300 transition-all"
+              >
                 <div>
                   <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 block mb-1">
                     {card1.metric}
@@ -71,10 +89,16 @@ export default function TestimonialsSection() {
 
                   <span className="text-xs font-bold text-zinc-400">✦</span>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Card 3: 3x (Tall Card) */}
-              <div className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-zinc-300 transition-all">
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-zinc-300 transition-all"
+              >
                 <div>
                   <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 block mb-1">
                     {card3.metric}
@@ -109,7 +133,7 @@ export default function TestimonialsSection() {
 
                   <span className="text-xs font-bold text-zinc-400">▲</span>
                 </div>
-              </div>
+              </motion.div>
 
             </div>
 
@@ -117,7 +141,13 @@ export default function TestimonialsSection() {
             <div className="flex flex-col gap-6">
               
               {/* Card 2: 45% */}
-              <div className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-zinc-300 transition-all">
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-zinc-300 transition-all"
+              >
                 <div>
                   <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 block mb-1">
                     {card2.metric}
@@ -152,10 +182,16 @@ export default function TestimonialsSection() {
 
                   <span className="text-xs font-bold text-zinc-400">❖</span>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Card 4: Dark CTA Box */}
-              <div className="rounded-[28px] bg-[#09090b] text-white p-7 sm:p-9 shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[220px] border border-zinc-800">
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="rounded-[28px] bg-[#09090b] text-white p-7 sm:p-9 shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[220px] border border-zinc-800"
+              >
                 {/* Subtle dot pattern */}
                 <div className="absolute inset-0 opacity-15 pointer-events-none hero-dot-pattern" />
 
@@ -182,12 +218,12 @@ export default function TestimonialsSection() {
                     </span>
                   </Link>
                 </div>
-              </div>
+              </motion.div>
 
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

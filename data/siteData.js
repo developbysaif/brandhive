@@ -71,40 +71,130 @@ export const STATS = [
 
 export const SERVICES = [
   {
+    slug: "ux-design",
     title: "UX Design",
+    headline: "Engineered User Experiences That Eliminate Friction & Maximize Conversions",
     description: "User journey mapping, wireframing, and interactive prototyping that eliminates churn and simplifies workflows.",
+    longDescription: "We craft seamless user journeys backed by behavioral psychology, quantitative telemetry, and usability testing. By removing cognitive overload, we transform complex web applications into effortless, high-retention digital products.",
     tags: ["Research", "Wireframing", "Testing"],
-    image: "/images/services-light.jpg"
+    image: "/images/services-light.jpg",
+    metrics: [
+      { value: "48%", label: "Reduction in user drop-off" },
+      { value: "3.2x", label: "Faster task completion" },
+      { value: "99.4%", label: "Usability satisfaction" }
+    ],
+    deliverables: [
+      { title: "User Persona & Journey Maps", desc: "Detailed empathy mapping, funnel drop-off analysis, and behavioral flow charts." },
+      { title: "Wireframing & Information Architecture", desc: "Low-to-high fidelity layout hierarchy optimizing scanning speed and navigation." },
+      { title: "Interactive UX Prototyping", desc: "Clickable end-to-end user workflows tested with real target audience segments." },
+      { title: "Usability Testing & Audit Reports", desc: "Quantitative heuristic evaluations and actionable UX improvement roadmaps." }
+    ],
+    technologies: ["Figma", "FigJam", "Hotjar", "Maze", "UserTesting", "Miro"]
   },
   {
+    slug: "web-design",
     title: "Web Design",
+    headline: "High-Contrast, Conversion-Engineered Websites Built for Fast-Growing Brands",
     description: "High-contrast, sleek websites tailored for conversions, fast load times, and effortless content management.",
+    longDescription: "We build bespoke marketing websites that capture attention, convey immediate authority, and turn passive visitors into paying customers. Every layout is responsive, lightning fast, and optimized for Core Web Vitals.",
     tags: ["Framer", "Next.js", "Responsive"],
-    image: "/images/hero-device.jpg"
+    image: "/images/hero-device.jpg",
+    metrics: [
+      { value: "240%", label: "Increase in conversion rate" },
+      { value: "<0.4s", label: "Average page load time" },
+      { value: "100/100", label: "Google Lighthouse score" }
+    ],
+    deliverables: [
+      { title: "Full Responsive Web Architecture", desc: "Mobile-first layouts tailored for all screen sizes from mobile to ultra-wide displays." },
+      { title: "Framer & Next.js Implementation", desc: "Clean, componentized code architecture with sub-second page transitions." },
+      { title: "Conversion Rate Optimization (CRO)", desc: "Strategic headline positioning, visual hierarchy, and friction-free CTA placement." },
+      { title: "SEO & Performance Tuning", desc: "Structured metadata, OpenGraph cards, schema markup, and WebP/AVIF asset compression." }
+    ],
+    technologies: ["Next.js", "React", "Tailwind CSS", "Framer", "TypeScript", "Vercel"]
   },
   {
+    slug: "ui-design",
     title: "UI Design",
+    headline: "Pixel-Perfect Visual Craftsmanship & Scalable Component Systems",
     description: "Crafting pixel-perfect design systems, sleek UI components, and intuitive dashboards in Figma.",
+    longDescription: "Our user interface design combines ultra-modern dark aesthetics, refined micro-interactions, and rigorous design tokens. We build modular design systems that scale effortlessly from MVP to enterprise.",
     tags: ["Design System", "Figma", "Micro-interactions"],
-    image: "/images/project-audio.jpg"
+    image: "/images/project-audio.jpg",
+    metrics: [
+      { value: "400+", label: "Reusable UI components" },
+      { value: "65%", label: "Faster dev handoff" },
+      { value: "100%", label: "Tokenized design consistency" }
+    ],
+    deliverables: [
+      { title: "Complete Figma Design System", desc: "Color palettes, typographic scale, spacing grids, icons, and autolayout components." },
+      { title: "Dashboard & App Interface Design", desc: "Intuitive SaaS portals, analytics telemetry, and dense data visualization views." },
+      { title: "Micro-Interactions & States", desc: "Hover states, loading skeletons, modal transitions, and tactile feedback cues." },
+      { title: "Developer Handoff Documentation", desc: "Clean specs, CSS variable mappings, and interactive token documentation." }
+    ],
+    technologies: ["Figma", "Tokens Studio", "Storybook", "Lucide Icons", "Radix UI"]
   },
   {
+    slug: "branding",
     title: "Branding",
+    headline: "Distinct Visual Identities That Set You Miles Apart From the Competition",
     description: "Distinct visual identities, typography guidelines, and bold brand positioning that sets your startup apart.",
+    longDescription: "We build unforgettable brand foundations for ambitious founders. From logo marks and custom typographic systems to complete brand guidelines, we position your product as the clear market leader.",
     tags: ["Identity", "Typography", "Guidelines"],
-    image: "/images/project-stylus.jpg"
+    image: "/images/project-stylus.jpg",
+    metrics: [
+      { value: "3.5x", label: "Inbound brand inquiries" },
+      { value: "85%", label: "Improved brand recall" },
+      { value: "14+", label: "Brand asset kits delivered" }
+    ],
+    deliverables: [
+      { title: "Logo Mark & Wordmark System", desc: "Scalable vector marks engineered for digital app icons, physical swag, and billboards." },
+      { title: "Typography & Color Palette", desc: "Editorial typographic hierarchy paired with high-contrast, emotive accent palettes." },
+      { title: "Brand Identity Guidelines (PDF)", desc: "Comprehensive rules governing logo clearspace, tone of voice, imagery, and usage." },
+      { title: "Social & Marketing Collateral", desc: "Twitter/X headers, pitch decks, LinkedIn banners, and print-ready stationery." }
+    ],
+    technologies: ["Illustrator", "Photoshop", "Glyphs", "InDesign", "Figma"]
   },
   {
+    slug: "fintech-and-saas",
     title: "Fintech & SaaS",
+    headline: "High-Security, Data-Dense Interfaces Engineered for Complex SaaS",
     description: "Deep domain design expertise for complex financial products, security compliance, and data visualization.",
+    longDescription: "Specialized UX/UI engineering for mission-critical financial software, decentralized protocols, and B2B SaaS platforms. We make intricate data intelligible and trustworthy for power users and institutions.",
     tags: ["Dashboards", "Data Viz", "SaaS"],
-    image: "/images/project-sensor.jpg"
+    image: "/images/project-sensor.jpg",
+    metrics: [
+      { value: "$100M+", label: "Client funding raised" },
+      { value: "-35%", label: "Customer support ticket drop" },
+      { value: "99.99%", label: "Reliability perception" }
+    ],
+    deliverables: [
+      { title: "Financial Dashboards & Portals", desc: "Real-time ledger views, portfolio analytics, and multi-currency transactions." },
+      { title: "Complex Data Visualization", desc: "High-density charts, candle graphs, heatmaps, and customizable widget grids." },
+      { title: "Onboarding & KYC Flows", desc: "Frictionless identity verification, multi-factor authentication, and compliance UX." },
+      { title: "Role-Based Permission Systems", desc: "Granular administrative views, audit trails, and team workspace management." }
+    ],
+    technologies: ["D3.js", "Chart.js", "Recharts", "Figma", "Next.js", "Tailwind"]
   },
   {
+    slug: "motion-design",
     title: "Motion Design",
+    headline: "Fluid Micro-Interactions, 3D Product Loops, & Scroll-Driven Magic",
     description: "Subtle micro-animations, scroll-driven interactions, and product feature loops that delight users.",
+    longDescription: "Bring your product to life with buttery-smooth 60fps animations. From interactive hardware 3D models to subtle physics-based UI micro-interactions, we elevate your digital brand with dynamic elegance.",
     tags: ["Lottie", "Framer Motion", "3D"],
-    image: "/images/blog-holographic.jpg"
+    image: "/images/blog-holographic.jpg",
+    metrics: [
+      { value: "60 FPS", label: "Silky smooth performance" },
+      { value: "+52%", label: "User engagement time" },
+      { value: "<50kb", label: "Ultra-lightweight Lottie files" }
+    ],
+    deliverables: [
+      { title: "Scroll-Driven Interactive Animations", desc: "Dynamic parallax effects, sticky feature reveals, and timeline scrub animations." },
+      { title: "3D Product Renders & WebGL Loops", desc: "Hyper-realistic hardware device rotations and interactive 3D camera controls." },
+      { title: "Lottie & Vector Micro-Animations", desc: "Interactive button loaders, celebration confetti, and dynamic status indicators." },
+      { title: "Promo Feature Motion Teasers", desc: "High-impact 4K social product launch videos and feature highlight loops." }
+    ],
+    technologies: ["Framer Motion", "Spline", "Three.js", "After Effects", "Rive", "Lottie"]
   }
 ];
 
@@ -375,5 +465,68 @@ export const FAQ_ITEMS = [
   {
     question: "Will my template receive updates?",
     answer: "All customers receive lifetime free updates and new component additions as the design system expands."
+  }
+];
+
+export const TEAM_MEMBERS = [
+  {
+    name: "Alex Rivera",
+    role: "Founder & Creative Director",
+    bio: "Ex-Stripe and Apple designer leading strategic vision, brand identity, and high-conversion design systems.",
+    avatar: "https://framerusercontent.com/images/IjJa1vBDDNzASjXZGBTLcNObHc.jpg",
+    tags: ["Creative Direction", "Branding", "Strategy"],
+    x: "https://x.com",
+    linkedin: "https://linkedin.com",
+    dribbble: "https://dribbble.com"
+  },
+  {
+    name: "Elena Rostova",
+    role: "Head of UX & Product Strategy",
+    bio: "Obsessed with behavioral user psychology, cognitive load reduction, and conversion funnel optimization.",
+    avatar: "https://framerusercontent.com/images/30H4QgT6gjZSasw0DBCbxLWLY.jpg",
+    tags: ["UX Research", "Information Architecture", "CRO"],
+    x: "https://x.com",
+    linkedin: "https://linkedin.com",
+    dribbble: "https://dribbble.com"
+  },
+  {
+    name: "David Chen",
+    role: "Lead Frontend Architect",
+    bio: "Master of sub-second Web Vitals, Framer Motion choreography, and bulletproof Next.js component ecosystems.",
+    avatar: "https://framerusercontent.com/images/fTIxNsAqL5kAuPvnKO17blaBlqc.jpg",
+    tags: ["Next.js", "WebGL", "Performance"],
+    x: "https://x.com",
+    linkedin: "https://linkedin.com",
+    dribbble: "https://dribbble.com"
+  },
+  {
+    name: "Maya Lindqvist",
+    role: "Principal 3D & Motion Designer",
+    bio: "Crafting fluid interactive 3D product loops, tactile spatial graphics, and buttery-smooth micro-interactions.",
+    avatar: "https://framerusercontent.com/images/UKNBT47BxbtxXCLRDY5cWmNUeYQ.jpg",
+    tags: ["3D Spline", "Three.js", "Motion Graphics"],
+    x: "https://x.com",
+    linkedin: "https://linkedin.com",
+    dribbble: "https://dribbble.com"
+  },
+  {
+    name: "Marcus Vance",
+    role: "Design Systems Engineer",
+    bio: "Bridging the gap between Figma design tokens and production React components with mathematical precision.",
+    avatar: "https://framerusercontent.com/images/b6L3lDYpFTgGEMCn1iAOdSuxsw.jpg",
+    tags: ["Design Systems", "Figma Tokens", "UI Architecture"],
+    x: "https://x.com",
+    linkedin: "https://linkedin.com",
+    dribbble: "https://dribbble.com"
+  },
+  {
+    name: "Sarah Jenkins",
+    role: "Brand Strategist & Copy Lead",
+    bio: "Translating complex technical products into bold, magnetic positioning and conversion-focused copy.",
+    avatar: "https://framerusercontent.com/images/MAVstedJYqQvsrJ7l1kxjR498.jpg",
+    tags: ["Brand Positioning", "Conversion Copy", "Growth"],
+    x: "https://x.com",
+    linkedin: "https://linkedin.com",
+    dribbble: "https://dribbble.com"
   }
 ];

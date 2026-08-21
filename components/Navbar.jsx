@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowUpRight, ArrowRight, Folder, Mail, ChevronDown } from 'lucide-react';
+import { Menu, X, ArrowUpRight, ArrowRight, Folder, Users, ChevronDown } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -132,21 +132,21 @@ export default function Navbar() {
                           </div>
                         </Link>
 
-                        {/* Contact Item */}
+                        {/* Team Item */}
                         <Link
-                          href="/contact-us"
+                          href="/team"
                           onClick={() => setIsCompanyOpen(false)}
                           className="flex items-center gap-3 p-2 rounded-2xl hover:bg-zinc-50 transition-colors group"
                         >
                           <div className="w-10 h-10 rounded-2xl border border-zinc-200/80 bg-white flex items-center justify-center text-zinc-600 group-hover:border-zinc-300 shadow-sm flex-shrink-0">
-                            <Mail className="w-4 h-4 text-zinc-600" />
+                            <Users className="w-4 h-4 text-zinc-600" />
                           </div>
                           <div>
                             <span className="text-xs sm:text-sm font-bold text-zinc-900 group-hover:text-black block">
-                              Contact
+                              Team
                             </span>
                             <p className="text-[11px] text-zinc-500 font-normal leading-tight mt-0.5">
-                              Get in touch with our expert team.
+                              Meet our creative leads & engineers.
                             </p>
                           </div>
                         </Link>
@@ -222,26 +222,26 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Contact Link */}
+          {/* Team Link (Replaces Contact in Navlinks) */}
           <Link
-            href="/contact-us"
+            href="/team"
             className={`relative px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
-              pathname === '/contact-us'
+              pathname === '/team'
                 ? 'text-black bg-zinc-100 font-semibold'
                 : 'text-zinc-600 hover:text-black hover:bg-zinc-100/60'
             }`}
           >
-            Contact
+            Team
           </Link>
         </div>
 
-        {/* Action Button */}
+        {/* Action Button: Replaced 'Get Template' with 'Contact Us' */}
         <div className="hidden md:flex items-center gap-3">
           <Link
             href="/contact-us"
             className="group relative inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold text-white bg-black hover:bg-zinc-800 transition-all duration-200 shadow-sm hover:scale-[1.02] active:scale-[0.98]"
           >
-            <span>Get Template</span>
+            <span>Contact Us</span>
             <ArrowUpRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>
@@ -278,6 +278,13 @@ export default function Navbar() {
               </span>
             </Link>
             <Link
+              href="/team"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-zinc-800 hover:bg-zinc-100"
+            >
+              <span>Team</span>
+            </Link>
+            <Link
               href="/contact-us"
               onClick={() => setIsOpen(false)}
               className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium text-zinc-800 hover:bg-zinc-100"
@@ -306,7 +313,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-black text-white text-sm font-semibold hover:bg-zinc-800 transition-colors"
             >
-              <span>Get Template</span>
+              <span>Contact Us</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
           </div>

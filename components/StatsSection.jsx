@@ -6,11 +6,17 @@ import { motion } from 'framer-motion';
 
 export default function StatsSection() {
   return (
-    <section className="py-14 sm:py-20 relative bg-[#fafafa]">
+    <section className="py-16 sm:py-24 relative bg-[#fafafa]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
-        {/* Tag & Heading */}
-        <div className="mb-10 sm:mb-14">
+        {/* Tag & Heading with Scroll-Up Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="mb-10 sm:mb-14"
+        >
           <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-3">
             <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
             <span>Impact</span>
@@ -20,17 +26,17 @@ export default function StatsSection() {
             Lamosa makes it simple, <br />
             <span className="text-[#64748b] font-medium">and delivers results.</span>
           </h2>
-        </div>
+        </motion.div>
 
-        {/* 3 Impact Stats Cards */}
+        {/* 3 Impact Stats Cards with Staggered Scroll-Up Animation */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {STATS.map((stat, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: idx * 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
               className="rounded-[28px] bg-white border border-zinc-200/80 p-7 sm:p-8 flex flex-col justify-between shadow-[0_4px_25px_rgba(0,0,0,0.02)] hover:border-zinc-300 transition-all group"
             >
               <div>
