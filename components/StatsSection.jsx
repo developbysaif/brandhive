@@ -23,7 +23,7 @@ export default function StatsSection() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-[1.15]">
-            Lamosa makes it simple, <br />
+            Brandhive makes it simple, <br />
             <span className="text-[#64748b] font-medium">and delivers results.</span>
           </h2>
         </motion.div>

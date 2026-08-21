@@ -114,7 +114,7 @@ export default function ServiceDetailPage({ params }) {
               {service.title} Architecture
             </span>
             <span className="text-xs font-mono text-zinc-300">
-              Lamosa Design Sprint
+              Brandhive Design Sprint
             </span>
           </div>
         </div>

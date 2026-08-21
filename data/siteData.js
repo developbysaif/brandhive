@@ -336,7 +336,7 @@ export const TESTIMONIALS = [
   {
     metric: "2.3x",
     metricLabel: "increase in lead conversion",
-    quote: "Lamosa completely redefined our digital presence. Their strategic design approach and attention to user behavior boosted our conversion rate significantly. We went from just a pretty site to a performance-driven asset.",
+    quote: "Brandhive completely redefined our digital presence. Their strategic design approach and attention to user behavior boosted our conversion rate significantly. We went from just a pretty site to a performance-driven asset.",
     author: "Sarah Coleman",
     role: "CMO",
     avatar: "https://framerusercontent.com/images/IjJa1vBDDNzASjXZGBTLcNObHc.jpg",
@@ -345,7 +345,7 @@ export const TESTIMONIALS = [
   {
     metric: "45%",
     metricLabel: "Reduced bounce rate",
-    quote: "The team at Lamosa not only built us a beautiful platform—they made it fast, smart, and incredibly intuitive. Their UX insights and performance tweaks made a huge difference in keeping users engaged.",
+    quote: "The team at Brandhive not only built us a beautiful platform—they made it fast, smart, and incredibly intuitive. Their UX insights and performance tweaks made a huge difference in keeping users engaged.",
     author: "Marcus Levine",
     role: "Co-founder",
     avatar: "https://framerusercontent.com/images/30H4QgT6gjZSasw0DBCbxLWLY.jpg",
@@ -354,7 +354,7 @@ export const TESTIMONIALS = [
   {
     metric: "3x",
     metricLabel: "faster MVP launch",
-    quote: "Working with Lamosa helped us cut our launch timeline dramatically. They understand product goals and build with both speed and precision. Easily one of the best agencies we've worked with.",
+    quote: "Working with Brandhive helped us cut our launch timeline dramatically. They understand product goals and build with both speed and precision. Easily one of the best agencies we've worked with.",
     author: "Amina Khatri",
     role: "Head of Product",
     avatar: "https://framerusercontent.com/images/fTIxNsAqL5kAuPvnKO17blaBlqc.jpg",
@@ -363,7 +363,7 @@ export const TESTIMONIALS = [
   {
     metric: "62%",
     metricLabel: "increase in mobile traffic retention",
-    quote: "Lamosa completely redefined our digital presence. Their strategic design approach and attention to user behavior boosted our conversion rate significantly. We went from just a pretty site to a performance-driven asset.",
+    quote: "Brandhive completely redefined our digital presence. Their strategic design approach and attention to user behavior boosted our conversion rate significantly. We went from just a pretty site to a performance-driven asset.",
     author: "Julian Ortega",
     role: "CEO",
     avatar: "https://framerusercontent.com/images/UKNBT47BxbtxXCLRDY5cWmNUeYQ.jpg",

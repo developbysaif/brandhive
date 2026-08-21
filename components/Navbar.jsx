@@ -57,14 +57,13 @@ export default function Navbar() {
             : 'bg-white/70 backdrop-blur-md border-zinc-200/60 shadow-sm'
         }`}
       >
-        {/* Logo */}
+        {/* Brandhive Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-7 h-7 rounded-lg bg-black flex items-center justify-center text-white font-bold text-xs shadow-sm">
-            L
-          </div>
-          <span className="text-black font-bold text-base tracking-tight">
-            Lamosa<span className="text-[#ea580c]">.</span>
-          </span>
+          <img
+            src="/images/Brandhive_logo Black.png"
+            alt="Brandhive"
+            className="h-6 sm:h-7 w-auto object-contain transition-transform group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop Navigation Links */}

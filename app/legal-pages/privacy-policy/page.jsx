@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
               1. Introduction
             </h2>
             <p className="text-zinc-600">
-              Welcome to Lamosa Studio. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains what information we collect, how we use it, and what rights you have in relation to it.
+              Welcome to Brandhive Studio. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains what information we collect, how we use it, and what rights you have in relation to it.
             </p>
           </div>
 

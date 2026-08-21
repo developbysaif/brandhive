@@ -34,12 +34,11 @@ export default function Footer() {
           {/* Brand & Newsletter Column */}
           <div className="md:col-span-6 space-y-4">
             <Link href="/" className="inline-flex items-center gap-2 group">
-              <div className="w-7 h-7 rounded-lg bg-black flex items-center justify-center text-white font-bold text-xs shadow-sm">
-                L
-              </div>
-              <span className="text-black font-bold text-lg tracking-tight">
-                Lamosa<span className="text-[#ea580c]">.</span>
-              </span>
+              <img
+                src="/images/Brandhive_logo Black.png"
+                alt="Brandhive"
+                className="h-7 sm:h-8 w-auto object-contain transition-transform group-hover:scale-105"
+              />
             </Link>
 
             <div className="pt-2">
@@ -151,15 +150,15 @@ export default function Footer() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="select-none pointer-events-none my-6 sm:my-8 overflow-hidden"
         >
-          <span className="text-[16vw] font-black tracking-tighter text-zinc-200/60 leading-none block text-center">
-            Lamosa<span className="text-[#ea580c]/30">.</span>
+          <span className="text-[14vw] font-black tracking-tighter text-zinc-200/60 leading-none block text-center">
+            Brandhive<span className="text-[#ea580c]/30">.</span>
           </span>
         </motion.div>
 
         {/* Bottom Bar */}
         <div className="pt-6 border-t border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-normal">
           <div>
-            © {new Date().getFullYear()} Built in Next.js by <span className="text-zinc-800 font-semibold">Lamosa Studio</span>
+            © {new Date().getFullYear()} Built in Next.js by <span className="text-zinc-800 font-semibold">Brandhive Studio</span>
           </div>
 
           <div className="flex items-center gap-5">

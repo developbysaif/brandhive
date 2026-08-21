@@ -48,7 +48,7 @@ export default function TermsOfServicePage() {
               2. Services
             </h2>
             <p className="text-zinc-600">
-              Lamosa Studio provides design, development, branding, and digital product services. We reserve the right to modify or discontinue any service at any time.
+              Brandhive Studio provides design, development, branding, and digital product services. We reserve the right to modify or discontinue any service at any time.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export default function TermsOfServicePage() {
               5. Intellectual Property
             </h2>
             <p className="text-zinc-600">
-              All content, templates, and code created by Lamosa Studio are protected by copyright and may not be copied, reused, or redistributed without permission.
+              All content, templates, and code created by Brandhive Studio are protected by copyright and may not be copied, reused, or redistributed without permission.
             </p>
           </div>
 
@@ -138,7 +138,7 @@ export default function TermsOfServicePage() {
               11. Governing Law
             </h2>
             <p className="text-zinc-600">
-              These Terms are governed by the laws of the country in which Lamosa Studio operates. Any disputes will be resolved in that jurisdiction.
+              These Terms are governed by the laws of the country in which Brandhive Studio operates. Any disputes will be resolved in that jurisdiction.
             </p>
           </div>
 
