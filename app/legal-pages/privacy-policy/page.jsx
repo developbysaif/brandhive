@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
               7. Your Rights
             </h2>
             <p className="text-zinc-600">
-              You have the right to access, correct, or delete your data. You may also object to certain uses or request data portability. To exercise your rights, contact us at: <a href="mailto:privacy@lamosa.com" className="text-[#ea580c] hover:underline font-medium">privacy@lamosa.com</a>
+              You have the right to access, correct, or delete your data. You may also object to certain uses or request data portability. To exercise your rights, contact us at: <a href="mailto:brandhive.creatives@gmail.com" className="text-[#ea580c] hover:underline font-medium">brandhive.creatives@gmail.com</a>
             </p>
           </div>
 
@@ -153,7 +153,7 @@ export default function PrivacyPolicyPage() {
               11. Contact
             </h2>
             <p className="text-zinc-600">
-              If you have questions about this Privacy Policy, contact us at: <a href="mailto:legal@lamosa.com" className="text-[#ea580c] hover:underline font-medium">legal@lamosa.com</a>
+              If you have questions about this Privacy Policy, contact us at: <a href="mailto:brandhive.creatives@gmail.com" className="text-[#ea580c] hover:underline font-medium">brandhive.creatives@gmail.com</a>
             </p>
           </div>
 

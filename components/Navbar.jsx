@@ -62,7 +62,7 @@ export default function Navbar() {
           <img
             src="/images/Brandhive_logo Black.png"
             alt="Brandhive"
-            className="h-6 sm:h-7 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-5 sm:h-6 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </Link>
 

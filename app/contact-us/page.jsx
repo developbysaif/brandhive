@@ -48,8 +48,28 @@ export default function ContactPage() {
     setLoading(true);
     setStatus({ type: null, message: '' });
 
+    // Format WhatsApp message with form details
+    const formattedMessage = [
+      `*New Inquiry from Brandhive Website*`,
+      ``,
+      `*Name:* ${formData.firstName} ${formData.lastName}`.trim(),
+      `*Email:* ${formData.email}`,
+      formData.company ? `*Company:* ${formData.company}` : null,
+      formData.phoneNumber ? `*Phone:* ${formData.phoneCode} ${formData.phoneNumber}` : null,
+      formData.country ? `*Country:* ${formData.country}` : null,
+      formData.services && formData.services.length > 0 ? `*Services:* ${formData.services.join(', ')}` : null,
+      formData.budget ? `*Budget:* ${formData.budget}` : null,
+      formData.message ? `*Message:* ${formData.message}` : null,
+    ]
+      .filter(Boolean)
+      .join('\n');
+
+    const whatsappNumber = '923206835781';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formattedMessage)}`;
+
     try {
-      const response = await fetch('/api/contact', {
+      // Also send inquiry to API route
+      await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -67,37 +87,34 @@ export default function ContactPage() {
         })
       });
 
-      const data = await response.json();
+      // Redirect to WhatsApp
+      window.open(whatsappUrl, '_blank');
 
-      if (response.ok) {
-        setStatus({
-          type: 'success',
-          message: data.message || 'Thank you! Your request has been received.'
-        });
-        // Reset form
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          company: '',
-          phoneCode: '+1',
-          phoneNumber: '',
-          country: '',
-          message: '',
-          services: [],
-          budget: ''
-        });
-      } else {
-        setStatus({
-          type: 'error',
-          message: data.error || 'Failed to submit form. Please check your information.'
-        });
-      }
+      setStatus({
+        type: 'success',
+        message: 'Thank you! Redirecting to WhatsApp with your request details...'
+      });
+
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        phoneCode: '+1',
+        phoneNumber: '',
+        country: '',
+        message: '',
+        services: [],
+        budget: ''
+      });
     } catch (err) {
       console.error('Submission error:', err);
+      // Even if API fails, still open WhatsApp
+      window.open(whatsappUrl, '_blank');
       setStatus({
-        type: 'error',
-        message: 'Something went wrong. Please try again.'
+        type: 'success',
+        message: 'Opening WhatsApp to send your request...'
       });
     } finally {
       setLoading(false);
@@ -138,32 +155,34 @@ export default function ContactPage() {
                 <div>
                   <span className="text-zinc-400 block text-xs mb-1">Email:</span>
                   <a
-                    href="mailto:hello@lamosa.studio"
+                    href="mailto:brandhive.creatives@gmail.com"
                     className="font-bold text-white underline hover:text-zinc-300 transition-colors"
                   >
-                    hello@lamosa.studio
+                    brandhive.creatives@gmail.com
                   </a>
                 </div>
 
                 <div>
-                  <span className="text-zinc-400 block text-xs mb-1">Phone:</span>
+                  <span className="text-zinc-400 block text-xs mb-1">Phone / WhatsApp:</span>
                   <a
-                    href="tel:+123456778"
+                    href="https://wa.me/923206835781"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="font-bold text-white underline hover:text-zinc-300 transition-colors"
                   >
-                    +1 234 56778
+                    +92 320 6835781
                   </a>
                 </div>
 
                 <div>
                   <span className="text-zinc-400 block text-xs mb-1">Address:</span>
                   <span className="font-medium text-zinc-200 block">
-                    447 Broadway, 2nd Floor, New York City, USA
+                    Office No 9, 236 Badar Block, Allama Iqbal Town, Lahore
                   </span>
                 </div>
 
                 <div className="pt-4 border-t border-white/10 text-[11px] text-zinc-400 font-normal">
-                  Available from Monday to Friday, 9 AM – 6 PM GMT
+                  Available from Monday to Friday, 9 AM – 6 PM PKT
                 </div>
               </div>
             </div>
