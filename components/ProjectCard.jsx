@@ -35,10 +35,10 @@ export default function ProjectCard({ project }) {
         {/* View ( -> ) Pill Button */}
         <Link
           href={`/projects/${project.slug}`}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white hover:bg-zinc-100 border border-zinc-200 text-xs font-semibold text-zinc-800 shadow-sm transition-all active:scale-95 flex-shrink-0"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white hover:bg-[#F6C53C] hover:border-[#F6C53C] border border-zinc-200 text-xs font-semibold text-zinc-800 hover:text-black shadow-sm transition-all active:scale-95 flex-shrink-0"
         >
           <span>View</span>
-          <span className="w-5 h-5 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-600 group-hover:bg-black group-hover:text-white transition-colors">
+          <span className="w-5 h-5 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-600 group-hover:bg-black group-hover:text-[#F6C53C] transition-colors">
             <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
           </span>
         </Link>
@@ -47,7 +47,7 @@ export default function ProjectCard({ project }) {
       {/* Hardware Device Render Showcase Card */}
       <Link
         href={`/projects/${project.slug}`}
-        className="block rounded-[28px] overflow-hidden bg-[#111] border border-zinc-200/80 shadow-md relative aspect-[16/11] group-hover:shadow-xl transition-all duration-500"
+        className="block rounded-[28px] overflow-hidden bg-[#111] border border-zinc-200/80 group-hover:border-[#F6C53C]/80 shadow-md relative aspect-[16/11] group-hover:shadow-[0_16px_40px_rgba(246,197,60,0.12)] transition-all duration-500"
       >
         <img
           src={project.image}

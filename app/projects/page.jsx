@@ -48,7 +48,7 @@ export default function ProjectsPage() {
           <div className="flex justify-center mt-10">
             <button
               type="button"
-              className="px-6 py-2.5 rounded-full bg-white hover:bg-zinc-50 border border-zinc-200 text-xs font-semibold text-zinc-800 shadow-sm transition-all active:scale-95 cursor-pointer"
+              className="px-6 py-2.5 rounded-full bg-white hover:bg-[#F6C53C] hover:border-[#F6C53C] text-zinc-800 hover:text-black border border-zinc-200 text-xs font-semibold shadow-sm transition-all active:scale-95 cursor-pointer"
             >
               Load More
             </button>

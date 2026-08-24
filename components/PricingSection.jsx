@@ -86,7 +86,7 @@ export default function PricingSection() {
                   <div className="space-y-3 mb-8">
                     {plan.features.map((feature, i) => (
                       <div key={i} className="flex items-start gap-2.5 text-xs">
-                        <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${isDark ? 'text-[#ea580c]' : 'text-zinc-900'}`} />
+                        <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${isDark ? 'text-[#F6C53C]' : 'text-[#F6C53C]'}`} />
                         <span className={isDark ? 'text-zinc-300' : 'text-zinc-700'}>
                           {feature}
                         </span>
@@ -101,8 +101,8 @@ export default function PricingSection() {
                     href="/contact-us"
                     className={`w-full py-3 rounded-full text-xs font-semibold flex items-center justify-center gap-2 transition-all ${
                       isDark
-                        ? 'bg-white hover:bg-zinc-200 text-black'
-                        : 'bg-black hover:bg-zinc-800 text-white'
+                        ? 'bg-white hover:bg-[#F6C53C] hover:text-black text-black'
+                        : 'bg-black hover:bg-[#F6C53C] hover:text-black text-white'
                     }`}
                   >
                     <span>{plan.buttonText}</span>
@@ -124,11 +124,11 @@ export default function PricingSection() {
         >
           
           {/* Left Review Card */}
-          <div className="md:col-span-7 p-7 rounded-3xl bg-white border border-zinc-200 shadow-sm flex flex-col justify-between">
+          <div className="md:col-span-7 p-7 rounded-3xl bg-white border border-zinc-200 shadow-sm flex flex-col justify-between hover:border-[#F6C53C]/70 transition-colors">
             <div>
-              <div className="flex items-center gap-1 text-black mb-3">
+              <div className="flex items-center gap-1 text-[#F6C53C] mb-3">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-black text-black" />
+                  <Star key={i} className="w-3.5 h-3.5 fill-[#F6C53C] text-[#F6C53C]" />
                 ))}
               </div>
               <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed mb-4">
@@ -154,9 +154,9 @@ export default function PricingSection() {
           </div>
 
           {/* Right Dark Callout Box */}
-          <div className="md:col-span-5 p-7 rounded-3xl bg-[#09090b] text-white shadow-xl flex flex-col justify-between border border-zinc-800">
+          <div className="md:col-span-5 p-7 rounded-3xl bg-[#09090b] text-white shadow-xl flex flex-col justify-between border border-zinc-800 hover:border-[#F6C53C]/50 transition-colors">
             <div>
-              <span className="text-[11px] uppercase tracking-wider text-[#ea580c] font-semibold block mb-1">
+              <span className="text-[11px] uppercase tracking-wider text-[#F6C53C] font-semibold block mb-1">
                 Custom Inquiry
               </span>
               <h3 className="text-base font-bold mb-1">
@@ -170,7 +170,7 @@ export default function PricingSection() {
             <div className="pt-4">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-zinc-200 text-black text-xs font-semibold transition-all shadow"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-[#F6C53C] hover:text-black text-black text-xs font-semibold transition-all shadow"
               >
                 <Calendar className="w-3.5 h-3.5" />
                 <span>Book Call</span>

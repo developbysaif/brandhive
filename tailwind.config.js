@@ -18,7 +18,9 @@ module.exports = {
           darkBorder: "#222222"
         },
         brand: {
-          accent: "#e1443a", // coral red badge dot
+          accent: "#F6C53C", // brand gold accent
+          yellow: "#F6C53C",
+          hover: "#F6C53C",
           green: "#22c55e",  // open for work green
           dark: "#0a0a0a"
         },
@@ -31,7 +33,7 @@ module.exports = {
           text: "#0a0a0a",
           textMuted: "#737373",
           textLight: "#a3a3a3",
-          red: "#ea580c"
+          red: "#F6C53C"
         }
       },
       fontFamily: {

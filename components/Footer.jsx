@@ -61,14 +61,14 @@ export default function Footer() {
                     value={newsletterEmail}
                     onChange={(e) => setNewsletterEmail(e.target.value)}
                     placeholder="Enter your email..."
-                    className="w-full bg-[#f4f5f7] border border-zinc-200/80 focus:border-zinc-400 focus:bg-white rounded-full pl-4 pr-11 py-2.5 text-xs text-zinc-900 placeholder-zinc-400 focus:outline-none transition-all"
+                    className="w-full bg-[#f4f5f7] border border-zinc-200/80 focus:border-[#F6C53C] focus:bg-white rounded-full pl-4 pr-11 py-2.5 text-xs text-zinc-900 placeholder-zinc-400 focus:outline-none transition-all"
                   />
                   <button
                     type="submit"
-                    className="absolute right-1.5 w-7 h-7 rounded-full bg-[#ea580c] hover:bg-[#c2410c] text-white flex items-center justify-center transition-transform active:scale-95 cursor-pointer shadow-sm"
+                    className="absolute right-1.5 w-7 h-7 rounded-full bg-[#F6C53C] hover:bg-[#e2b02a] text-black flex items-center justify-center transition-transform active:scale-95 cursor-pointer shadow-sm font-bold"
                     aria-label="Subscribe to newsletter"
                   >
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
                   </button>
                 </form>
               )}
@@ -82,35 +82,35 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs text-zinc-600 font-medium">
               <li>
-                <Link href="/" className="hover:text-black transition-colors">
+                <Link href="/" className="hover:text-[#F6C53C] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-black transition-colors">
+                <Link href="/services" className="hover:text-[#F6C53C] transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="hover:text-black transition-colors flex items-center gap-1.5">
+                <Link href="/projects" className="hover:text-[#F6C53C] transition-colors flex items-center gap-1.5">
                   <span>Projects</span>
-                  <span className="px-1.5 py-0.2 text-[9px] uppercase font-bold bg-[#ea580c]/10 text-[#ea580c] rounded-full">
+                  <span className="px-1.5 py-0.2 text-[9px] uppercase font-bold bg-[#F6C53C]/30 text-zinc-900 rounded-full">
                     New
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="hover:text-black transition-colors">
+                <Link href="/team" className="hover:text-[#F6C53C] transition-colors">
                   Our Team
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-black transition-colors">
+                <Link href="/pricing" className="hover:text-[#F6C53C] transition-colors">
                   Pricing & Plans
                 </Link>
               </li>
               <li>
-                <Link href="/contact-us" className="hover:text-black transition-colors">
+                <Link href="/contact-us" className="hover:text-[#F6C53C] transition-colors">
                   Contact Us
                 </Link>
               </li>
@@ -124,21 +124,21 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs text-zinc-600 font-medium">
               <li>
-                <a href="https://www.facebook.com/brandhive.creatives" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors inline-flex items-center gap-1">
+                <a href="https://www.facebook.com/brandhive.creatives" target="_blank" rel="noopener noreferrer" className="hover:text-[#F6C53C] transition-colors inline-flex items-center gap-1 group">
                   <span>Facebook</span>
-                  <ArrowUpRight className="w-3 h-3 text-zinc-400" />
+                  <ArrowUpRight className="w-3 h-3 text-zinc-400 group-hover:text-[#F6C53C] transition-colors" />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/brandhive.creatives/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors inline-flex items-center gap-1">
+                <a href="https://www.instagram.com/brandhive.creatives/" target="_blank" rel="noopener noreferrer" className="hover:text-[#F6C53C] transition-colors inline-flex items-center gap-1 group">
                   <span>Instagram</span>
-                  <ArrowUpRight className="w-3 h-3 text-zinc-400" />
+                  <ArrowUpRight className="w-3 h-3 text-zinc-400 group-hover:text-[#F6C53C] transition-colors" />
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/brand-hive-creatives/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors inline-flex items-center gap-1">
+                <a href="https://www.linkedin.com/company/brand-hive-creatives/" target="_blank" rel="noopener noreferrer" className="hover:text-[#F6C53C] transition-colors inline-flex items-center gap-1 group">
                   <span>LinkedIn</span>
-                  <ArrowUpRight className="w-3 h-3 text-zinc-400" />
+                  <ArrowUpRight className="w-3 h-3 text-zinc-400 group-hover:text-[#F6C53C] transition-colors" />
                 </a>
               </li>
             </ul>
@@ -155,7 +155,7 @@ export default function Footer() {
           className="select-none pointer-events-none my-6 sm:my-8 overflow-hidden"
         >
           <span className="text-[14vw] font-black tracking-tighter text-zinc-200/60 leading-none block text-center">
-            Brandhive<span className="text-[#ea580c]/30">.</span>
+            Brandhive<span className="text-[#F6C53C]">.</span>
           </span>
         </motion.div>
 

@@ -78,17 +78,17 @@ export default function CtaBanner() {
             <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto mb-10">
               <Link
                 href="/contact-us"
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3 rounded-full bg-black hover:bg-zinc-900 text-white text-xs sm:text-sm font-medium shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3 rounded-full bg-black hover:bg-[#F6C53C] hover:text-black text-white text-xs sm:text-sm font-medium shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Book A Call</span>
-                <span className="w-5 h-5 rounded-full bg-zinc-800 flex items-center justify-center text-zinc-300 group-hover:bg-zinc-700 transition-colors">
+                <span className="w-5 h-5 rounded-full bg-zinc-800 group-hover:bg-black/80 flex items-center justify-center text-zinc-300 group-hover:text-[#F6C53C] transition-colors">
                   <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                 </span>
               </Link>
 
               <Link
-                href="/#pricing"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full bg-white hover:bg-zinc-50 text-zinc-800 border border-zinc-200 text-xs sm:text-sm font-medium shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
+                href="/pricing"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full bg-white hover:bg-[#F6C53C]/15 hover:border-[#F6C53C]/80 text-zinc-800 border border-zinc-200 text-xs sm:text-sm font-medium shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>View Plans</span>
               </Link>

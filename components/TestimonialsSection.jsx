@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
           className="text-center max-w-2xl mx-auto mb-12 sm:mb-16"
         >
           <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-3">
-            <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
+            <span className="w-1.5 h-1.5 rounded-[2px] bg-[#F6C53C]"></span>
             <span>Testimonials</span>
           </div>
 
@@ -53,7 +53,7 @@ export default function TestimonialsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-zinc-300 transition-all"
+                className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-[#F6C53C]/80 hover:shadow-[0_8px_30px_rgba(246,197,60,0.08)] transition-all"
               >
                 <div>
                   <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 block mb-1">
@@ -63,7 +63,7 @@ export default function TestimonialsSection() {
                     {card1.metricLabel}
                   </span>
 
-                  <span className="text-red-500 text-lg font-bold block mb-2 leading-none">““</span>
+                  <span className="text-[#F6C53C] text-lg font-bold block mb-2 leading-none">““</span>
 
                   <p className="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-6 font-normal">
                     {card1.quote}
@@ -97,7 +97,7 @@ export default function TestimonialsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-zinc-300 transition-all"
+                className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-[#F6C53C]/80 hover:shadow-[0_8px_30px_rgba(246,197,60,0.08)] transition-all"
               >
                 <div>
                   <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 block mb-1">
@@ -107,7 +107,7 @@ export default function TestimonialsSection() {
                     {card3.metricLabel}
                   </span>
 
-                  <span className="text-red-500 text-lg font-bold block mb-2 leading-none">““</span>
+                  <span className="text-[#F6C53C] text-lg font-bold block mb-2 leading-none">““</span>
 
                   <p className="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-6 font-normal">
                     {card3.quote}
@@ -146,7 +146,7 @@ export default function TestimonialsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-zinc-300 transition-all"
+                className="rounded-[28px] bg-white border border-zinc-200/90 p-6 sm:p-8 shadow-sm flex flex-col justify-between hover:border-[#F6C53C]/80 hover:shadow-[0_8px_30px_rgba(246,197,60,0.08)] transition-all"
               >
                 <div>
                   <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 block mb-1">
@@ -156,7 +156,7 @@ export default function TestimonialsSection() {
                     {card2.metricLabel}
                   </span>
 
-                  <span className="text-red-500 text-lg font-bold block mb-2 leading-none">““</span>
+                  <span className="text-[#F6C53C] text-lg font-bold block mb-2 leading-none">““</span>
 
                   <p className="text-xs sm:text-[13px] text-zinc-600 leading-relaxed mb-6 font-normal">
                     {card2.quote}
@@ -190,7 +190,7 @@ export default function TestimonialsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="rounded-[28px] bg-[#09090b] text-white p-7 sm:p-9 shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[220px] border border-zinc-800"
+                className="rounded-[28px] bg-[#09090b] text-white p-7 sm:p-9 shadow-xl relative overflow-hidden flex flex-col justify-between min-h-[220px] border border-zinc-800 hover:border-[#F6C53C]/50 transition-all"
               >
                 {/* Subtle dot pattern */}
                 <div className="absolute inset-0 opacity-15 pointer-events-none hero-dot-pattern" />
@@ -200,7 +200,7 @@ export default function TestimonialsSection() {
                     You focus <span className="font-normal text-zinc-300">on your company.</span>
                   </h3>
                   <h3 className="text-lg sm:text-xl font-bold tracking-tight text-white mb-2">
-                    We make <span className="underline decoration-zinc-500">it happen.</span>
+                    We make <span className="underline decoration-[#F6C53C]">it happen.</span>
                   </h3>
                   <p className="text-xs text-zinc-400 font-medium">
                     Unstoppable Growth.
@@ -210,10 +210,10 @@ export default function TestimonialsSection() {
                 <div className="relative z-10 pt-6 flex justify-end">
                   <Link
                     href="/contact-us"
-                    className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-zinc-100 text-zinc-950 text-xs font-semibold shadow-md transition-all active:scale-95"
+                    className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-[#F6C53C] hover:text-black text-zinc-950 text-xs font-semibold shadow-md transition-all active:scale-95"
                   >
                     <span>Book A Call</span>
-                    <span className="w-5 h-5 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-800 group-hover:bg-black group-hover:text-white transition-colors">
+                    <span className="w-5 h-5 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-800 group-hover:bg-black group-hover:text-[#F6C53C] transition-colors">
                       <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </Link>

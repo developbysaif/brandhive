@@ -12,17 +12,17 @@ import { motion } from 'framer-motion';
 export default function PricingPage() {
   const guarantees = [
     {
-      icon: <Zap className="w-4 h-4 text-[#ea580c]" />,
+      icon: <Zap className="w-4 h-4 text-[#F6C53C]" />,
       title: "Fast Turnaround",
       desc: "Get your requests and deliverables in days, not weeks, with dedicated priority sprints."
     },
     {
-      icon: <ShieldCheck className="w-4 h-4 text-[#ea580c]" />,
+      icon: <ShieldCheck className="w-4 h-4 text-[#F6C53C]" />,
       title: "100% Satisfaction",
       desc: "Iterative revisions until you are completely satisfied with the craft and outcome."
     },
     {
-      icon: <Sparkles className="w-4 h-4 text-[#ea580c]" />,
+      icon: <Sparkles className="w-4 h-4 text-[#F6C53C]" />,
       title: "No Hidden Costs",
       desc: "Transparent upfront pricing with zero surprise charges or vendor lock-in."
     }
@@ -40,7 +40,7 @@ export default function PricingPage() {
           className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200/80 text-xs font-semibold text-zinc-700 mb-4 shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ea580c]"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#F6C53C]"></span>
             <span>Pricing & Plans</span>
           </div>
 
@@ -56,7 +56,7 @@ export default function PricingPage() {
           {/* Guarantee Badges */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left pt-6">
             {guarantees.map((item, idx) => (
-              <div key={idx} className="p-4 rounded-2xl bg-white border border-zinc-200/80 shadow-sm">
+              <div key={idx} className="p-4 rounded-2xl bg-white border border-zinc-200/80 shadow-sm hover:border-[#F6C53C]/80 hover:shadow-md transition-all">
                 <div className="mb-2">{item.icon}</div>
                 <h3 className="text-xs font-bold text-zinc-900 mb-1">{item.title}</h3>
                 <p className="text-[11px] text-zinc-500 leading-snug">{item.desc}</p>

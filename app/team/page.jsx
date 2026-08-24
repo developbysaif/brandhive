@@ -11,17 +11,17 @@ import { motion } from 'framer-motion';
 export default function TeamPage() {
   const principles = [
     {
-      icon: <Zap className="w-4 h-4 text-[#ea580c]" />,
+      icon: <Zap className="w-4 h-4 text-[#F6C53C]" />,
       title: "Speed with Precision",
       description: "We work in rapid, high-velocity sprints. Every concept is tested, refined, and validated without unnecessary agency bloat."
     },
     {
-      icon: <ShieldCheck className="w-4 h-4 text-[#ea580c]" />,
+      icon: <ShieldCheck className="w-4 h-4 text-[#F6C53C]" />,
       title: "Radical Transparency",
       description: "No middlemen or account executives. You collaborate directly with senior designers and engineers who execute your vision."
     },
     {
-      icon: <Sparkles className="w-4 h-4 text-[#ea580c]" />,
+      icon: <Sparkles className="w-4 h-4 text-[#F6C53C]" />,
       title: "Obsession with Craft",
       description: "From sub-pixel layout alignments to 60fps micro-animations, we sweat the subtle details that turn good products into great brands."
     }
@@ -39,7 +39,7 @@ export default function TeamPage() {
           className="text-center max-w-2xl mx-auto mb-14 sm:mb-18"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200/80 text-xs font-semibold text-zinc-700 mb-4 shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ea580c]"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#F6C53C]"></span>
             <span>Our Team</span>
           </div>
 
@@ -82,7 +82,7 @@ export default function TeamPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="rounded-[24px] bg-[#fafafa] border border-zinc-200/80 p-6 flex flex-col justify-between hover:border-zinc-300 hover:bg-white hover:shadow-md transition-all group"
+                className="rounded-[24px] bg-[#fafafa] border border-zinc-200/80 p-6 flex flex-col justify-between hover:border-[#F6C53C]/80 hover:bg-white hover:shadow-[0_8px_30px_rgba(246,197,60,0.1)] transition-all group"
               >
                 <div>
                   {/* Avatar & Header */}
@@ -100,7 +100,7 @@ export default function TeamPage() {
                       <h3 className="text-base font-bold text-zinc-900 leading-tight">
                         {member.name}
                       </h3>
-                      <p className="text-xs text-[#ea580c] font-semibold mt-0.5">
+                      <p className="text-xs text-zinc-600 font-semibold mt-0.5">
                         {member.role}
                       </p>
                     </div>
@@ -131,7 +131,7 @@ export default function TeamPage() {
                       href={member.x}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-black transition-colors"
+                      className="hover:text-[#F6C53C] transition-colors"
                     >
                       X (Twitter)
                     </a>
@@ -140,7 +140,7 @@ export default function TeamPage() {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-black transition-colors"
+                      className="hover:text-[#F6C53C] transition-colors"
                     >
                       LinkedIn
                     </a>
@@ -149,7 +149,7 @@ export default function TeamPage() {
                       href={member.dribbble}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-black transition-colors"
+                      className="hover:text-[#F6C53C] transition-colors"
                     >
                       Dribbble
                     </a>

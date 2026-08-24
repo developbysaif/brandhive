@@ -73,8 +73,8 @@ export default function Navbar() {
             href="/"
             className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
               pathname === '/'
-                ? 'text-black bg-zinc-100 font-semibold'
-                : 'text-zinc-600 hover:text-black hover:bg-zinc-100/60'
+                ? 'text-black bg-[#F6C53C]/25 font-semibold'
+                : 'text-zinc-600 hover:text-black hover:bg-[#F6C53C]/20'
             }`}
           >
             Home
@@ -85,8 +85,8 @@ export default function Navbar() {
             href="/services"
             className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
               pathname.startsWith('/services')
-                ? 'text-black bg-zinc-100 font-semibold'
-                : 'text-zinc-600 hover:text-black hover:bg-zinc-100/60'
+                ? 'text-black bg-[#F6C53C]/25 font-semibold'
+                : 'text-zinc-600 hover:text-black hover:bg-[#F6C53C]/20'
             }`}
           >
             Services
@@ -97,12 +97,12 @@ export default function Navbar() {
             href="/projects"
             className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 flex items-center gap-1.5 ${
               pathname.startsWith('/projects')
-                ? 'text-black bg-zinc-100 font-semibold'
-                : 'text-zinc-600 hover:text-black hover:bg-zinc-100/60'
+                ? 'text-black bg-[#F6C53C]/25 font-semibold'
+                : 'text-zinc-600 hover:text-black hover:bg-[#F6C53C]/20'
             }`}
           >
             <span>Projects</span>
-            <span className="px-1.5 py-0.2 text-[9px] uppercase font-bold bg-[#ea580c]/10 text-[#ea580c] rounded-full">
+            <span className="px-1.5 py-0.2 text-[9px] uppercase font-bold bg-[#F6C53C]/30 text-zinc-900 rounded-full">
               New
             </span>
           </Link>
@@ -112,8 +112,8 @@ export default function Navbar() {
             href="/team"
             className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
               pathname === '/team'
-                ? 'text-black bg-zinc-100 font-semibold'
-                : 'text-zinc-600 hover:text-black hover:bg-zinc-100/60'
+                ? 'text-black bg-[#F6C53C]/25 font-semibold'
+                : 'text-zinc-600 hover:text-black hover:bg-[#F6C53C]/20'
             }`}
           >
             Our Team
@@ -124,8 +124,8 @@ export default function Navbar() {
             href="/pricing"
             className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
               pathname === '/pricing'
-                ? 'text-black bg-zinc-100 font-semibold'
-                : 'text-zinc-600 hover:text-black hover:bg-zinc-100/60'
+                ? 'text-black bg-[#F6C53C]/25 font-semibold'
+                : 'text-zinc-600 hover:text-black hover:bg-[#F6C53C]/20'
             }`}
           >
             Pricing & Plans
@@ -138,8 +138,8 @@ export default function Navbar() {
             href="/contact-us"
             className={`group relative inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 shadow-sm hover:scale-[1.02] active:scale-[0.98] ${
               pathname === '/contact-us'
-                ? 'bg-zinc-900 text-white ring-2 ring-zinc-400'
-                : 'bg-black hover:bg-zinc-800 text-white'
+                ? 'bg-[#F6C53C] text-black ring-2 ring-[#F6C53C]/50'
+                : 'bg-black hover:bg-[#F6C53C] hover:text-black text-white'
             }`}
           >
             <span>Contact Us</span>
@@ -165,7 +165,7 @@ export default function Navbar() {
               href="/"
               onClick={() => setIsOpen(false)}
               className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                pathname === '/' ? 'bg-zinc-100 text-black font-semibold' : 'text-zinc-800 hover:bg-zinc-100'
+                pathname === '/' ? 'bg-[#F6C53C]/30 text-black font-semibold' : 'text-zinc-800 hover:bg-[#F6C53C]/20'
               }`}
             >
               <span>Home</span>
@@ -175,7 +175,7 @@ export default function Navbar() {
               href="/services"
               onClick={() => setIsOpen(false)}
               className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                pathname.startsWith('/services') ? 'bg-zinc-100 text-black font-semibold' : 'text-zinc-800 hover:bg-zinc-100'
+                pathname.startsWith('/services') ? 'bg-[#F6C53C]/30 text-black font-semibold' : 'text-zinc-800 hover:bg-[#F6C53C]/20'
               }`}
             >
               <span>Services</span>
@@ -185,11 +185,11 @@ export default function Navbar() {
               href="/projects"
               onClick={() => setIsOpen(false)}
               className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                pathname.startsWith('/projects') ? 'bg-zinc-100 text-black font-semibold' : 'text-zinc-800 hover:bg-zinc-100'
+                pathname.startsWith('/projects') ? 'bg-[#F6C53C]/30 text-black font-semibold' : 'text-zinc-800 hover:bg-[#F6C53C]/20'
               }`}
             >
               <span>Projects</span>
-              <span className="px-2 py-0.5 text-xs font-semibold bg-[#ea580c]/10 text-[#ea580c] rounded-full">
+              <span className="px-2 py-0.5 text-xs font-semibold bg-[#F6C53C]/30 text-zinc-900 rounded-full">
                 New
               </span>
             </Link>
@@ -198,7 +198,7 @@ export default function Navbar() {
               href="/team"
               onClick={() => setIsOpen(false)}
               className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                pathname === '/team' ? 'bg-zinc-100 text-black font-semibold' : 'text-zinc-800 hover:bg-zinc-100'
+                pathname === '/team' ? 'bg-[#F6C53C]/30 text-black font-semibold' : 'text-zinc-800 hover:bg-[#F6C53C]/20'
               }`}
             >
               <span>Our Team</span>
@@ -208,7 +208,7 @@ export default function Navbar() {
               href="/pricing"
               onClick={() => setIsOpen(false)}
               className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                pathname === '/pricing' ? 'bg-zinc-100 text-black font-semibold' : 'text-zinc-800 hover:bg-zinc-100'
+                pathname === '/pricing' ? 'bg-[#F6C53C]/30 text-black font-semibold' : 'text-zinc-800 hover:bg-[#F6C53C]/20'
               }`}
             >
               <span>Pricing & Plans</span>
@@ -218,7 +218,7 @@ export default function Navbar() {
               href="/contact-us"
               onClick={() => setIsOpen(false)}
               className={`flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                pathname === '/contact-us' ? 'bg-zinc-100 text-black font-semibold' : 'text-zinc-800 hover:bg-zinc-100'
+                pathname === '/contact-us' ? 'bg-[#F6C53C]/30 text-black font-semibold' : 'text-zinc-800 hover:bg-[#F6C53C]/20'
               }`}
             >
               <span>Contact Us</span>
@@ -228,14 +228,14 @@ export default function Navbar() {
               <Link
                 href="/legal-pages/privacy-policy"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-between px-4 py-2 rounded-xl text-xs font-medium text-zinc-500 hover:bg-zinc-100"
+                className="flex items-center justify-between px-4 py-2 rounded-xl text-xs font-medium text-zinc-500 hover:text-black hover:bg-[#F6C53C]/15 transition-colors"
               >
                 <span>Privacy Policy</span>
               </Link>
               <Link
                 href="/legal-pages/terms-of-service"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-between px-4 py-2 rounded-xl text-xs font-medium text-zinc-500 hover:bg-zinc-100"
+                className="flex items-center justify-between px-4 py-2 rounded-xl text-xs font-medium text-zinc-500 hover:text-black hover:bg-[#F6C53C]/15 transition-colors"
               >
                 <span>Terms of Service</span>
               </Link>
@@ -246,7 +246,7 @@ export default function Navbar() {
             <Link
               href="/contact-us"
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-black text-white text-sm font-semibold hover:bg-zinc-800 transition-colors shadow-md"
+              className="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-black hover:bg-[#F6C53C] hover:text-black text-white text-sm font-semibold transition-all shadow-md"
             >
               <span>Contact Us</span>
               <ArrowUpRight className="w-4 h-4" />

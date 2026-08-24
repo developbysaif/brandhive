@@ -23,7 +23,7 @@ export default function ServicesSection() {
           className="mb-10 sm:mb-12"
         >
           <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-3">
-            <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
+            <span className="w-1.5 h-1.5 rounded-[2px] bg-[#F6C53C]"></span>
             <span>Services</span>
           </div>
 
@@ -52,23 +52,23 @@ export default function ServicesSection() {
                   onClick={() => setActiveIdx(idx)}
                   className={`w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between group cursor-pointer ${
                     isActive
-                      ? 'bg-white border-zinc-300 shadow-md'
-                      : 'bg-white/60 border-zinc-200/80 hover:bg-white hover:border-zinc-300'
+                      ? 'bg-white border-[#F6C53C] shadow-md ring-1 ring-[#F6C53C]/40'
+                      : 'bg-white/60 border-zinc-200/80 hover:bg-white hover:border-[#F6C53C]/80 hover:shadow-sm'
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <div
                       className={`w-5 h-5 rounded-full flex items-center justify-center transition-colors ${
-                        isActive ? 'bg-black text-white' : 'border border-zinc-300 text-transparent group-hover:border-zinc-400'
+                        isActive ? 'bg-[#F6C53C] text-black font-bold' : 'border border-zinc-300 text-transparent group-hover:border-[#F6C53C]'
                       }`}
                     >
                       <Check className="w-3 h-3 stroke-[3]" />
                     </div>
-                    <span className={`text-sm font-semibold ${isActive ? 'text-zinc-900' : 'text-zinc-600'}`}>
+                    <span className={`text-sm font-semibold ${isActive ? 'text-zinc-900' : 'text-zinc-600 group-hover:text-black'}`}>
                       {service.title}
                     </span>
                   </div>
-                  <span className={`text-xs font-mono ${isActive ? 'text-zinc-900 font-bold' : 'text-zinc-400'}`}>
+                  <span className={`text-xs font-mono ${isActive ? 'text-black font-bold bg-[#F6C53C]/30 px-2 py-0.5 rounded-full' : 'text-zinc-400 group-hover:text-zinc-700'}`}>
                     0{idx + 1}
                   </span>
                 </button>
@@ -120,7 +120,7 @@ export default function ServicesSection() {
 
                         <Link
                           href={`/services/${activeService.slug}`}
-                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white text-black text-xs font-semibold hover:bg-zinc-100 transition-all shadow-md active:scale-95"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white text-black text-xs font-semibold hover:bg-[#F6C53C] hover:text-black transition-all shadow-md active:scale-95"
                         >
                           <span>Explore Service</span>
                           <ArrowUpRight className="w-3.5 h-3.5" />

@@ -29,7 +29,7 @@ export default function FaqSection() {
           >
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-3">
-                <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
+                <span className="w-1.5 h-1.5 rounded-[2px] bg-[#F6C53C]"></span>
                 <span>FAQs</span>
               </div>
               
@@ -40,7 +40,7 @@ export default function FaqSection() {
             </div>
 
             {/* Dark CTA Box */}
-            <div className="p-7 rounded-[28px] bg-[#09090b] text-white shadow-xl relative overflow-hidden border border-zinc-800 mt-6">
+            <div className="p-7 rounded-[28px] bg-[#09090b] text-white shadow-xl relative overflow-hidden border border-zinc-800 mt-6 hover:border-[#F6C53C]/50 transition-colors">
               <div className="absolute inset-0 opacity-15 pointer-events-none hero-dot-pattern" />
               <div className="relative z-10">
                 <h3 className="text-lg font-bold mb-1">
@@ -51,10 +51,10 @@ export default function FaqSection() {
                 </p>
                 <Link
                   href="/contact-us"
-                  className="group inline-flex items-center justify-between gap-3 px-5 py-2.5 rounded-full bg-white hover:bg-zinc-100 text-zinc-900 text-xs sm:text-sm font-semibold shadow-md transition-all active:scale-[0.98]"
+                  className="group inline-flex items-center justify-between gap-3 px-5 py-2.5 rounded-full bg-white hover:bg-[#F6C53C] hover:text-black text-zinc-900 text-xs sm:text-sm font-semibold shadow-md transition-all active:scale-[0.98]"
                 >
                   <span>Contact Us</span>
-                  <span className="w-5 h-5 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-700 group-hover:bg-black group-hover:text-white transition-colors">
+                  <span className="w-5 h-5 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-700 group-hover:bg-black group-hover:text-[#F6C53C] transition-colors">
                     <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
                   </span>
                 </Link>
@@ -77,8 +77,8 @@ export default function FaqSection() {
                   key={index}
                   className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                     isOpen
-                      ? 'bg-white border-zinc-300 shadow-sm'
-                      : 'bg-white border-zinc-200/80 hover:border-zinc-300'
+                      ? 'bg-white border-[#F6C53C] shadow-sm'
+                      : 'bg-white border-zinc-200/80 hover:border-[#F6C53C]/80'
                   }`}
                 >
                   <button

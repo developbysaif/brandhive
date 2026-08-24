@@ -157,7 +157,7 @@ export default function ContactPage() {
                   <span className="text-zinc-400 block text-xs mb-1">Email:</span>
                   <a
                     href="mailto:brandhive.creatives@gmail.com"
-                    className="font-bold text-white underline hover:text-zinc-300 transition-colors"
+                    className="font-bold text-white underline hover:text-[#F6C53C] transition-colors"
                   >
                     brandhive.creatives@gmail.com
                   </a>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                     href="https://wa.me/923206835781"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold text-white underline hover:text-zinc-300 transition-colors"
+                    className="font-bold text-white underline hover:text-[#F6C53C] transition-colors"
                   >
                     +92 320 6835781
                   </a>
@@ -362,24 +362,24 @@ export default function ContactPage() {
                       const isSelected = formData.services.includes(service);
                       return (
                         <button
-                          type="button"
                           key={service}
-                          onClick={() => toggleService(service)}
-                          className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl border text-xs font-medium text-left transition-all cursor-pointer ${
+                          type="button"
+                          onClick={() => handleServiceToggle(service)}
+                          className={`px-3.5 py-2 rounded-full text-xs font-semibold border transition-all flex items-center gap-2 cursor-pointer ${
                             isSelected
-                              ? 'bg-zinc-900 text-white border-zinc-900 shadow-sm'
-                              : 'bg-[#f4f5f7] text-zinc-700 border-transparent hover:border-zinc-300 hover:bg-zinc-100'
+                              ? 'bg-[#F6C53C] border-[#F6C53C] text-black shadow-sm'
+                              : 'bg-[#f4f5f7] border-transparent text-zinc-700 hover:border-[#F6C53C]/80 hover:bg-white'
                           }`}
                         >
                           <div
-                            className={`w-4 h-4 rounded-md border flex items-center justify-center transition-colors ${
+                            className={`w-3.5 h-3.5 rounded-full flex items-center justify-center border transition-colors ${
                               isSelected
-                                ? 'bg-white border-white text-black'
+                                ? 'border-black bg-black text-[#F6C53C]'
                                 : 'border-zinc-300 bg-white'
                             }`}
                           >
                             {isSelected && (
-                              <svg className="w-3 h-3 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                              <svg className="w-2.5 h-2.5 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                 <polyline points="20 6 9 17 4 12" />
                               </svg>
                             )}
@@ -400,7 +400,7 @@ export default function ContactPage() {
                     <select
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                      className="w-full appearance-none bg-[#f4f5f7] border border-transparent focus:border-zinc-300 focus:bg-white rounded-2xl px-4 py-3 text-xs sm:text-sm text-zinc-900 focus:outline-none cursor-pointer transition-all"
+                      className="w-full appearance-none bg-[#f4f5f7] border border-transparent focus:border-[#F6C53C] focus:bg-white rounded-2xl px-4 py-3 text-xs sm:text-sm text-zinc-900 focus:outline-none cursor-pointer transition-all"
                     >
                       <option value="">Select a budget</option>
                       <option value="<$5k">&lt; $5,000</option>
@@ -417,7 +417,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-3.5 rounded-full bg-zinc-600 hover:bg-zinc-900 text-white text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-[0.98] disabled:opacity-50 cursor-pointer"
+                    className="w-full py-3.5 rounded-full bg-black hover:bg-[#F6C53C] hover:text-black text-white text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all shadow-md active:scale-[0.98] disabled:opacity-50 cursor-pointer"
                   >
                     {loading ? (
                       <>
@@ -433,10 +433,10 @@ export default function ContactPage() {
                   </button>
 
                   <Link
-                    href="/#pricing"
-                    className="w-full py-3 rounded-full bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-800 text-xs sm:text-sm font-semibold flex items-center justify-center transition-all shadow-sm active:scale-[0.98]"
+                    href="/pricing"
+                    className="w-full py-3 rounded-full bg-white hover:bg-[#F6C53C]/15 hover:border-[#F6C53C]/80 border border-zinc-200 text-zinc-800 text-xs sm:text-sm font-semibold flex items-center justify-center transition-all shadow-sm active:scale-[0.98]"
                   >
-                    <span>Book A Call</span>
+                    <span>View Pricing & Plans</span>
                   </Link>
                 </div>
 
