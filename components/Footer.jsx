@@ -87,6 +87,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services" className="hover:text-black transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
                 <Link href="/projects" className="hover:text-black transition-colors flex items-center gap-1.5">
                   <span>Projects</span>
                   <span className="px-1.5 py-0.2 text-[9px] uppercase font-bold bg-[#ea580c]/10 text-[#ea580c] rounded-full">
@@ -96,12 +101,17 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/team" className="hover:text-black transition-colors">
-                  Team
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="hover:text-black transition-colors">
+                  Pricing & Plans
                 </Link>
               </li>
               <li>
                 <Link href="/contact-us" className="hover:text-black transition-colors">
-                  Contact us
+                  Contact Us
                 </Link>
               </li>
             </ul>
