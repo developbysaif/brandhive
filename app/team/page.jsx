@@ -1,12 +1,137 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { TEAM_MEMBERS } from '@/data/siteData';
 import FaqSection from '@/components/FaqSection';
 import CtaBanner from '@/components/CtaBanner';
-import { ArrowRight, ArrowUpRight, Sparkles, Heart, ShieldCheck, Zap } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Sparkles, ShieldCheck, Zap, RotateCw } from 'lucide-react';
 import { motion } from 'framer-motion';
+
+function TeamFlipCard({ member, idx }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+      className="group relative aspect-[3/4] sm:aspect-[4/5] rounded-[28px] sm:rounded-[36px] [perspective:1200px] cursor-pointer"
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <div
+        className={`w-full h-full relative [transform-style:preserve-3d] rounded-[28px] sm:rounded-[36px] transition-transform duration-700 ease-out shadow-[0_12px_40px_rgba(0,0,0,0.08)] ${
+          isFlipped ? '[transform:rotateY(180deg)] shadow-[0_20px_50px_rgba(246,197,60,0.15)]' : ''
+        }`}
+      >
+        {/* Front Face: Portrait Photo with Dark Gradient & Info */}
+        <div className="absolute inset-0 w-full h-full rounded-[28px] sm:rounded-[36px] overflow-hidden [backface-visibility:hidden] bg-black border-2 border-zinc-200/80">
+          <img
+            src={member.avatar}
+            alt={member.name}
+            className="w-full h-full object-cover filter grayscale contrast-115 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent pointer-events-none" />
+
+          {/* Bottom Info Bar on Front Face matching Image 1 */}
+          <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-white z-10">
+            <div>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold tracking-tight text-white leading-tight">
+                {member.name}
+              </h3>
+              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium mt-0.5">
+                {member.role}
+              </p>
+            </div>
+
+            {/* Circular #F6C53C Action Button matching Image 1 */}
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#F6C53C] text-black flex items-center justify-center shadow-lg transition-transform group-hover:scale-110 group-hover:rotate-45 duration-300 flex-shrink-0">
+              <ArrowUpRight className="w-4 h-4 font-bold stroke-[2.5]" />
+            </div>
+          </div>
+        </div>
+
+        {/* Back Face: Flip Information (Bio, Skills, Socials) */}
+        <div className="absolute inset-0 w-full h-full rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 bg-[#09090b] text-white border-2 border-[#F6C53C]/40 shadow-2xl [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-between overflow-hidden">
+          <div className="absolute inset-0 opacity-15 pointer-events-none hero-dot-pattern" />
+
+          <div className="relative z-10">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#F6C53C] text-black shadow-sm">
+                {member.role}
+              </span>
+              <span className="text-xs text-zinc-500 font-mono">0{idx + 1}</span>
+            </div>
+
+            <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mb-3">
+              {member.name}
+            </h3>
+
+            <p className="text-xs sm:text-[13px] text-zinc-300 leading-relaxed mb-4">
+              {member.bio}
+            </p>
+
+            {/* Skill / Discipline Chips */}
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              {member.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-[10px] sm:text-[11px] font-medium text-zinc-200 backdrop-blur-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Social Links on Back Face */}
+          <div className="relative z-10 pt-4 border-t border-zinc-800 flex items-center justify-between">
+            <div className="flex items-center gap-3 text-xs text-zinc-400">
+              <a
+                href={member.x}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="hover:text-[#F6C53C] transition-colors font-medium"
+              >
+                X (Twitter)
+              </a>
+              <span>•</span>
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="hover:text-[#F6C53C] transition-colors font-medium"
+              >
+                LinkedIn
+              </a>
+              <span>•</span>
+              <a
+                href={member.dribbble}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="hover:text-[#F6C53C] transition-colors font-medium"
+              >
+                Dribbble
+              </a>
+            </div>
+
+            <div className="flex items-center gap-1 text-[10px] text-zinc-500">
+              <RotateCw className="w-3 h-3 text-[#F6C53C]" />
+              <span>Flip</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </motion.div>
+  );
+}
 
 export default function TeamPage() {
   const principles = [
@@ -31,136 +156,43 @@ export default function TeamPage() {
     <div className="pt-28 md:pt-36 bg-[#fafafa]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
-        {/* Page Header with Scroll-Up Animation */}
+        {/* Page Header with Headline & 2 Paragraph Columns matching Image 1 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="text-center max-w-2xl mx-auto mb-14 sm:mb-18"
+          className="mb-14 sm:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200/80 text-xs font-semibold text-zinc-700 mb-4 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200/80 text-xs font-semibold text-zinc-700 mb-6 shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-[#F6C53C]"></span>
             <span>Our Team</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 leading-[1.12] mb-4">
-            The creative minds. <br />
-            <span className="text-[#64748b] font-medium">Behind the momentum.</span>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 leading-[1.12] mb-8 max-w-4xl">
+            Exceptionally skilled world-class designers and visualizers.
           </h1>
 
-          <p className="text-zinc-600 text-xs sm:text-sm max-w-md mx-auto leading-relaxed mb-6">
-            We are a collective of product designers, brand strategists, and technical architects united by a shared obsession with craft.
-          </p>
-
-          {/* Stat Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs text-zinc-600">
-            <span className="px-3 py-1 rounded-full bg-white border border-zinc-200/80 shadow-sm font-medium">
-              100% In-House Team
-            </span>
-            <span className="px-3 py-1 rounded-full bg-white border border-zinc-200/80 shadow-sm font-medium">
-              12+ Core Specialists
-            </span>
-            <span className="px-3 py-1 rounded-full bg-white border border-zinc-200/80 shadow-sm font-medium">
-              Global Remote Studio
-            </span>
+          {/* Two Paragraph Columns matching Image 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12 text-xs sm:text-sm text-zinc-600 leading-relaxed max-w-5xl">
+            <p>
+              We are passionate about our work and its positive impact on our clients. With over 12 years of experience, we consistently deliver exceptional web solutions that offer a best-in-class experience.
+            </p>
+            <p>
+              We aim to create practical web solutions tailored to projects of all sizes, meeting unique project requirements. Our compelling web designs are crafted to perfectly align with your target audience.
+            </p>
           </div>
         </motion.div>
 
-        {/* Team Members Grid with Scroll-Up Stagger Animation */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="rounded-[32px] sm:rounded-[44px] bg-white border border-zinc-200/80 p-6 sm:p-8 md:p-12 shadow-[0_8px_40px_rgba(0,0,0,0.03)] mb-16 sm:mb-24"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* 3D Flip Team Cards Grid matching Image 1 */}
+        <div className="mb-20 sm:mb-28">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {TEAM_MEMBERS.map((member, idx) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="rounded-[24px] bg-[#fafafa] border border-zinc-200/80 p-6 flex flex-col justify-between hover:border-[#F6C53C]/80 hover:bg-white hover:shadow-[0_8px_30px_rgba(246,197,60,0.1)] transition-all group"
-              >
-                <div>
-                  {/* Avatar & Header */}
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="relative">
-                      <img
-                        src={member.avatar}
-                        alt={member.name}
-                        className="w-14 h-14 rounded-2xl object-cover border-2 border-white shadow-sm group-hover:scale-105 transition-transform"
-                      />
-                      <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-[#F6C53C] border-2 border-white shadow-sm" />
-                    </div>
-
-                    <div>
-                      <h3 className="text-base font-bold text-zinc-900 leading-tight">
-                        {member.name}
-                      </h3>
-                      <p className="text-xs text-zinc-600 font-semibold mt-0.5">
-                        {member.role}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Bio */}
-                  <p className="text-xs text-zinc-600 font-normal leading-relaxed mb-5">
-                    {member.bio}
-                  </p>
-                </div>
-
-                <div>
-                  {/* Discipline Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {member.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-0.5 rounded-full bg-white border border-zinc-200 text-[10px] font-medium text-zinc-600"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Social Links */}
-                  <div className="flex items-center gap-3 pt-3 border-t border-zinc-200/60 text-xs text-zinc-500">
-                    <a
-                      href={member.x}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-[#F6C53C] transition-colors"
-                    >
-                      X (Twitter)
-                    </a>
-                    <span>•</span>
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-[#F6C53C] transition-colors"
-                    >
-                      LinkedIn
-                    </a>
-                    <span>•</span>
-                    <a
-                      href={member.dribbble}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-[#F6C53C] transition-colors"
-                    >
-                      Dribbble
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
+              <TeamFlipCard key={member.name} member={member} idx={idx} />
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        {/* Culture / Studio Principles Bento Section */}
+        {/* Studio Principles Section */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
