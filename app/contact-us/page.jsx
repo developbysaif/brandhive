@@ -17,8 +17,7 @@ export default function ContactPage() {
     phoneNumber: '',
     country: '',
     message: '',
-    services: [],
-    budget: ''
+    services: []
   });
 
   const [loading, setLoading] = useState(false);
@@ -60,7 +59,6 @@ export default function ContactPage() {
       formData.phoneNumber ? `*Phone:* ${formData.phoneCode} ${formData.phoneNumber}` : null,
       formData.country ? `*Country:* ${formData.country}` : null,
       formData.services && formData.services.length > 0 ? `*Services:* ${formData.services.join(', ')}` : null,
-      formData.budget ? `*Budget:* ${formData.budget}` : null,
       formData.message ? `*Message:* ${formData.message}` : null,
     ]
       .filter(Boolean)
@@ -84,8 +82,7 @@ export default function ContactPage() {
           phone: `${formData.phoneCode} ${formData.phoneNumber}`.trim(),
           country: formData.country,
           message: formData.message,
-          services: formData.services,
-          budget: formData.budget
+          services: formData.services
         })
       });
 
@@ -107,8 +104,7 @@ export default function ContactPage() {
         phoneNumber: '',
         country: '',
         message: '',
-        services: [],
-        budget: ''
+        services: []
       });
     } catch (err) {
       console.error('Submission error:', err);
@@ -389,27 +385,6 @@ export default function ContactPage() {
                         </button>
                       );
                     })}
-                  </div>
-                </div>
-
-                {/* Budget Dropdown */}
-                <div>
-                  <label className="text-xs font-semibold text-zinc-700 block mb-1.5">
-                    Budget
-                  </label>
-                  <div className="relative">
-                    <select
-                      value={formData.budget}
-                      onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                      className="w-full appearance-none bg-[#f4f5f7] border border-transparent focus:border-[#F6C53C] focus:bg-white rounded-2xl px-4 py-3 text-xs sm:text-sm text-zinc-900 focus:outline-none cursor-pointer transition-all"
-                    >
-                      <option value="">Select a budget</option>
-                      <option value="<$5k">&lt; $5,000</option>
-                      <option value="$5k - $10k">$5,000 – $10,000</option>
-                      <option value="$10k - $25k">$10,000 – $25,000</option>
-                      <option value="$25k+">$25,000+</option>
-                    </select>
-                    <ChevronDown className="w-4 h-4 text-zinc-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
                   </div>
                 </div>
 

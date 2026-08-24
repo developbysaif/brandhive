@@ -286,15 +286,15 @@ export default function Hero() {
 
         </div>
 
-        {/* Large AI Hardware Showcase Mockup Slider (Larger & Prominent Size) */}
+        {/* Large AI Hardware Showcase Mockup Slider (Larger & Prominent Size with Full 4-Sided White Outline) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="rounded-[32px] sm:rounded-[44px] overflow-hidden bg-white border border-zinc-200/90 shadow-[0_24px_60px_rgba(0,0,0,0.08)] p-2.5 sm:p-3.5 mb-8 sm:mb-10 relative group select-none"
+          className="rounded-[32px] sm:rounded-[44px] overflow-hidden bg-white border border-zinc-200/90 shadow-[0_24px_60px_rgba(0,0,0,0.08)] p-3 sm:p-4 mb-8 sm:mb-10 relative group select-none ring-1 ring-zinc-200/60"
         >
           <div
-            className="rounded-[24px] sm:rounded-[36px] overflow-hidden relative aspect-[16/11] sm:aspect-[16/9] md:aspect-[21/11] min-h-[340px] sm:min-h-[460px] md:min-h-[540px] lg:min-h-[580px] bg-zinc-950"
+            className="rounded-[22px] sm:rounded-[34px] overflow-hidden relative aspect-[16/11] sm:aspect-[16/9] md:aspect-[21/11] min-h-[340px] sm:min-h-[460px] md:min-h-[540px] lg:min-h-[580px] bg-zinc-950 border-2 sm:border-4 border-white shadow-sm"
             onMouseEnter={() => setIsHeroSliderPaused(true)}
             onMouseLeave={() => setIsHeroSliderPaused(false)}
           >
