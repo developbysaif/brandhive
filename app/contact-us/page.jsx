@@ -16,8 +16,8 @@ export default function ContactPage() {
     phoneCode: '+1',
     phoneNumber: '',
     country: '',
-    message: '',
-    services: []
+    service: '',
+    message: ''
   });
 
   const [loading, setLoading] = useState(false);
@@ -35,15 +35,6 @@ export default function ContactPage() {
     'Web Development'
   ];
 
-  const toggleService = (service) => {
-    setFormData((prev) => ({
-      ...prev,
-      services: prev.services.includes(service)
-        ? prev.services.filter((s) => s !== service)
-        : [...prev.services, service]
-    }));
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -58,7 +49,7 @@ export default function ContactPage() {
       formData.company ? `*Company:* ${formData.company}` : null,
       formData.phoneNumber ? `*Phone:* ${formData.phoneCode} ${formData.phoneNumber}` : null,
       formData.country ? `*Country:* ${formData.country}` : null,
-      formData.services && formData.services.length > 0 ? `*Services:* ${formData.services.join(', ')}` : null,
+      formData.service ? `*Service:* ${formData.service}` : null,
       formData.message ? `*Message:* ${formData.message}` : null,
     ]
       .filter(Boolean)
@@ -81,8 +72,8 @@ export default function ContactPage() {
           company: formData.company,
           phone: `${formData.phoneCode} ${formData.phoneNumber}`.trim(),
           country: formData.country,
-          message: formData.message,
-          services: formData.services
+          service: formData.service,
+          message: formData.message
         })
       });
 
@@ -103,8 +94,8 @@ export default function ContactPage() {
         phoneCode: '+1',
         phoneNumber: '',
         country: '',
-        message: '',
-        services: []
+        service: '',
+        message: ''
       });
     } catch (err) {
       console.error('Submission error:', err);
@@ -335,57 +326,40 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Message Textarea */}
+                {/* Select Service Dropdown */}
                 <div>
                   <label className="text-xs font-semibold text-zinc-700 block mb-1.5">
-                    How can we help you?
+                    Select Service <span className="text-zinc-400 font-normal">(Optional)</span>
+                  </label>
+                  <div className="relative">
+                    <select
+                      value={formData.service}
+                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      className="w-full appearance-none bg-[#f4f5f7] border border-transparent focus:border-[#F6C53C] focus:bg-white rounded-2xl px-4 py-3 text-xs sm:text-sm text-zinc-900 focus:outline-none cursor-pointer transition-all"
+                    >
+                      <option value="">Select a service...</option>
+                      {availableServices.map((service) => (
+                        <option key={service} value={service}>
+                          {service}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="w-4 h-4 text-zinc-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+                  </div>
+                </div>
+
+                {/* Message / Description Textarea (Optional) */}
+                <div>
+                  <label className="text-xs font-semibold text-zinc-700 block mb-1.5">
+                    Project Description / Message <span className="text-zinc-400 font-normal">(Optional)</span>
                   </label>
                   <textarea
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Leave a message..."
-                    className="w-full bg-[#f4f5f7] border border-transparent focus:border-zinc-300 focus:bg-white rounded-2xl px-4 py-3 text-xs sm:text-sm text-zinc-900 placeholder-zinc-400 focus:outline-none transition-all resize-none"
+                    placeholder="Describe your project, goals, or requirements (optional)..."
+                    className="w-full bg-[#f4f5f7] border border-transparent focus:border-[#F6C53C] focus:bg-white rounded-2xl px-4 py-3 text-xs sm:text-sm text-zinc-900 placeholder-zinc-400 focus:outline-none transition-all resize-none"
                   ></textarea>
-                </div>
-
-                {/* Services Checkboxes */}
-                <div>
-                  <label className="text-xs font-semibold text-zinc-700 block mb-2">
-                    Services
-                  </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {availableServices.map((service) => {
-                      const isSelected = formData.services.includes(service);
-                      return (
-                        <button
-                          key={service}
-                          type="button"
-                          onClick={() => handleServiceToggle(service)}
-                          className={`px-3.5 py-2 rounded-full text-xs font-semibold border transition-all flex items-center gap-2 cursor-pointer ${
-                            isSelected
-                              ? 'bg-[#F6C53C] border-[#F6C53C] text-black shadow-sm'
-                              : 'bg-[#f4f5f7] border-transparent text-zinc-700 hover:border-[#F6C53C]/80 hover:bg-white'
-                          }`}
-                        >
-                          <div
-                            className={`w-3.5 h-3.5 rounded-full flex items-center justify-center border transition-colors ${
-                              isSelected
-                                ? 'border-black bg-black text-[#F6C53C]'
-                                : 'border-zinc-300 bg-white'
-                            }`}
-                          >
-                            {isSelected && (
-                              <svg className="w-2.5 h-2.5 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                              </svg>
-                            )}
-                          </div>
-                          <span>{service}</span>
-                        </button>
-                      );
-                    })}
-                  </div>
                 </div>
 
                 {/* Submit & Secondary Action Buttons */}
