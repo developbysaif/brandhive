@@ -53,17 +53,17 @@ export const CLIENT_LOGOS = [
 
 export const STATS = [
   {
-    value: "500+",
+    value: "100+",
     label: "Successful projects delivered",
     detail: "We build high-impact websites and digital experiences for startups and enterprises to scale fast"
   },
   {
-    value: "240%",
+    value: "180%",
     label: "Increased in conversion rate",
     detail: "Purpose-built digital experiences that elevate brands and increase conversion rates at every touchpoint."
   },
   {
-    value: "$100M+",
+    value: "$250k+",
     label: "Seed + series A funding",
     detail: "Through strategic design, marketing, and conversion optimization, we've helped businesses scale faster."
   }
@@ -71,130 +71,109 @@ export const STATS = [
 
 export const SERVICES = [
   {
-    slug: "ux-design",
-    title: "UX Design",
-    headline: "Engineered User Experiences That Eliminate Friction & Maximize Conversions",
-    description: "User journey mapping, wireframing, and interactive prototyping that eliminates churn and simplifies workflows.",
-    longDescription: "We craft seamless user journeys backed by behavioral psychology, quantitative telemetry, and usability testing. By removing cognitive overload, we transform complex web applications into effortless, high-retention digital products.",
-    tags: ["Research", "Wireframing", "Testing"],
-    image: "/images/services-light.jpg",
-    metrics: [
-      { value: "48%", label: "Reduction in user drop-off" },
-      { value: "3.2x", label: "Faster task completion" },
-      { value: "99.4%", label: "Usability satisfaction" }
-    ],
-    deliverables: [
-      { title: "User Persona & Journey Maps", desc: "Detailed empathy mapping, funnel drop-off analysis, and behavioral flow charts." },
-      { title: "Wireframing & Information Architecture", desc: "Low-to-high fidelity layout hierarchy optimizing scanning speed and navigation." },
-      { title: "Interactive UX Prototyping", desc: "Clickable end-to-end user workflows tested with real target audience segments." },
-      { title: "Usability Testing & Audit Reports", desc: "Quantitative heuristic evaluations and actionable UX improvement roadmaps." }
-    ],
-    technologies: ["Figma", "FigJam", "Hotjar", "Maze", "UserTesting", "Miro"]
-  },
-  {
-    slug: "web-design",
-    title: "Web Design",
-    headline: "High-Contrast, Conversion-Engineered Websites Built for Fast-Growing Brands",
-    description: "High-contrast, sleek websites tailored for conversions, fast load times, and effortless content management.",
-    longDescription: "We build bespoke marketing websites that capture attention, convey immediate authority, and turn passive visitors into paying customers. Every layout is responsive, lightning fast, and optimized for Core Web Vitals.",
-    tags: ["Framer", "Next.js", "Responsive"],
-    image: "/images/hero-device.jpg",
-    metrics: [
-      { value: "240%", label: "Increase in conversion rate" },
-      { value: "<0.4s", label: "Average page load time" },
-      { value: "100/100", label: "Google Lighthouse score" }
-    ],
-    deliverables: [
-      { title: "Full Responsive Web Architecture", desc: "Mobile-first layouts tailored for all screen sizes from mobile to ultra-wide displays." },
-      { title: "Framer & Next.js Implementation", desc: "Clean, componentized code architecture with sub-second page transitions." },
-      { title: "Conversion Rate Optimization (CRO)", desc: "Strategic headline positioning, visual hierarchy, and friction-free CTA placement." },
-      { title: "SEO & Performance Tuning", desc: "Structured metadata, OpenGraph cards, schema markup, and WebP/AVIF asset compression." }
-    ],
-    technologies: ["Next.js", "React", "Tailwind CSS", "Framer", "TypeScript", "Vercel"]
-  },
-  {
-    slug: "ui-design",
-    title: "UI Design",
-    headline: "Pixel-Perfect Visual Craftsmanship & Scalable Component Systems",
-    description: "Crafting pixel-perfect design systems, sleek UI components, and intuitive dashboards in Figma.",
-    longDescription: "Our user interface design combines ultra-modern dark aesthetics, refined micro-interactions, and rigorous design tokens. We build modular design systems that scale effortlessly from MVP to enterprise.",
-    tags: ["Design System", "Figma", "Micro-interactions"],
-    image: "/images/project-audio.jpg",
-    metrics: [
-      { value: "400+", label: "Reusable UI components" },
-      { value: "65%", label: "Faster dev handoff" },
-      { value: "100%", label: "Tokenized design consistency" }
-    ],
-    deliverables: [
-      { title: "Complete Figma Design System", desc: "Color palettes, typographic scale, spacing grids, icons, and autolayout components." },
-      { title: "Dashboard & App Interface Design", desc: "Intuitive SaaS portals, analytics telemetry, and dense data visualization views." },
-      { title: "Micro-Interactions & States", desc: "Hover states, loading skeletons, modal transitions, and tactile feedback cues." },
-      { title: "Developer Handoff Documentation", desc: "Clean specs, CSS variable mappings, and interactive token documentation." }
-    ],
-    technologies: ["Figma", "Tokens Studio", "Storybook", "Lucide Icons", "Radix UI"]
-  },
-  {
-    slug: "branding",
-    title: "Branding",
-    headline: "Distinct Visual Identities That Set You Miles Apart From the Competition",
-    description: "Distinct visual identities, typography guidelines, and bold brand positioning that sets your startup apart.",
-    longDescription: "We build unforgettable brand foundations for ambitious founders. From logo marks and custom typographic systems to complete brand guidelines, we position your product as the clear market leader.",
-    tags: ["Identity", "Typography", "Guidelines"],
+    slug: "branding-and-persona",
+    title: "Branding & Persona Development",
+    headline: "Distinct Brand Identities & Customer Personas That Drive Immediate Recall",
+    description: "Distinct visual identities, customer personas, typography systems, and bold positioning tailored for growth.",
+    longDescription: "We build unforgettable brand foundations and data-backed user personas for ambitious businesses. From logo systems and brand books to audience psychographics, we position your business as a category leader.",
+    tags: ["Brand Identity", "Persona Research", "Guidelines"],
     image: "/images/project-stylus.jpg",
     metrics: [
       { value: "3.5x", label: "Inbound brand inquiries" },
-      { value: "85%", label: "Improved brand recall" },
-      { value: "14+", label: "Brand asset kits delivered" }
+      { value: "92%", label: "Improved brand recall" },
+      { value: "100%", label: "Style guide adherence" }
     ],
     deliverables: [
-      { title: "Logo Mark & Wordmark System", desc: "Scalable vector marks engineered for digital app icons, physical swag, and billboards." },
-      { title: "Typography & Color Palette", desc: "Editorial typographic hierarchy paired with high-contrast, emotive accent palettes." },
-      { title: "Brand Identity Guidelines (PDF)", desc: "Comprehensive rules governing logo clearspace, tone of voice, imagery, and usage." },
-      { title: "Social & Marketing Collateral", desc: "Twitter/X headers, pitch decks, LinkedIn banners, and print-ready stationery." }
+      { title: "Brand Identity & Logo Suite", desc: "Scalable vector marks, wordmarks, icons, and dynamic color systems." },
+      { title: "Customer Persona Blueprint", desc: "In-depth user archetypes, pain point maps, and empathy frameworks." },
+      { title: "Complete Brand Guidelines", desc: "Comprehensive documentation covering tone, typography, usage, and assets." },
+      { title: "Stationery & Marketing Kit", desc: "Pitch decks, social templates, business cards, and marketing collateral." }
     ],
-    technologies: ["Illustrator", "Photoshop", "Glyphs", "InDesign", "Figma"]
+    technologies: ["Illustrator", "Photoshop", "Figma", "Glyphs", "InDesign"]
   },
   {
-    slug: "fintech-and-saas",
-    title: "Fintech & SaaS",
-    headline: "High-Security, Data-Dense Interfaces Engineered for Complex SaaS",
-    description: "Deep domain design expertise for complex financial products, security compliance, and data visualization.",
-    longDescription: "Specialized UX/UI engineering for mission-critical financial software, decentralized protocols, and B2B SaaS platforms. We make intricate data intelligible and trustworthy for power users and institutions.",
-    tags: ["Dashboards", "Data Viz", "SaaS"],
-    image: "/images/project-sensor.jpg",
+    slug: "graphic-designing",
+    title: "Graphic Designing",
+    headline: "High-Impact Visual Assets Crafted to Captivate Audiences Across Every Touchpoint",
+    description: "Pixel-perfect graphic design for social media, marketing campaigns, packaging, and digital ads.",
+    longDescription: "We craft modern, visually arresting graphic designs that stop the scroll and communicate value instantly. From promotional banners and social media creatives to custom illustrations, every design is optimized for conversion.",
+    tags: ["Social Creatives", "Ad Creatives", "Print & Digital"],
+    image: "/images/project-audio.jpg",
     metrics: [
-      { value: "$100M+", label: "Client funding raised" },
-      { value: "-35%", label: "Customer support ticket drop" },
-      { value: "99.99%", label: "Reliability perception" }
+      { value: "4.2x", label: "Social engagement lift" },
+      { value: "+65%", label: "Higher ad CTR" },
+      { value: "24-48h", label: "Fast turnaround time" }
     ],
     deliverables: [
-      { title: "Financial Dashboards & Portals", desc: "Real-time ledger views, portfolio analytics, and multi-currency transactions." },
-      { title: "Complex Data Visualization", desc: "High-density charts, candle graphs, heatmaps, and customizable widget grids." },
-      { title: "Onboarding & KYC Flows", desc: "Frictionless identity verification, multi-factor authentication, and compliance UX." },
-      { title: "Role-Based Permission Systems", desc: "Granular administrative views, audit trails, and team workspace management." }
+      { title: "High-Converting Ad Creatives", desc: "Static and carousel ads tested for Meta, Google, and TikTok performance." },
+      { title: "Social Media Kits", desc: "Consistent feed templates, story graphics, and carousel layouts." },
+      { title: "Marketing Collateral & Banners", desc: "Infographics, eBooks, brochures, banners, and billboard-ready artwork." },
+      { title: "Packaging & Merchandise", desc: "Physical package design, label layouts, and print-ready product mockups." }
     ],
-    technologies: ["D3.js", "Chart.js", "Recharts", "Figma", "Next.js", "Tailwind"]
+    technologies: ["Photoshop", "Illustrator", "Figma", "Canva Pro", "InDesign"]
   },
   {
-    slug: "motion-design",
-    title: "Motion Design",
-    headline: "Fluid Micro-Interactions, 3D Product Loops, & Scroll-Driven Magic",
-    description: "Subtle micro-animations, scroll-driven interactions, and product feature loops that delight users.",
-    longDescription: "Bring your product to life with buttery-smooth 60fps animations. From interactive hardware 3D models to subtle physics-based UI micro-interactions, we elevate your digital brand with dynamic elegance.",
-    tags: ["Lottie", "Framer Motion", "3D"],
+    slug: "digital-marketing-and-seo",
+    title: "Digital Marketing & SEO",
+    headline: "Data-Driven Search Optimization & Paid Acquisition That Scale Revenue",
+    description: "Comprehensive SEO strategies, PPC ad campaigns, content marketing, and conversion funnel optimization.",
+    longDescription: "Accelerate your business growth with full-funnel digital marketing and technical SEO. We optimize search rankings, manage high-ROI ad spend, and turn organic traffic into consistent pipeline revenue.",
+    tags: ["SEO Optimization", "PPC Campaigns", "Growth Strategy"],
+    image: "/images/hero-device.jpg",
+    metrics: [
+      { value: "180%", label: "Organic traffic surge" },
+      { value: "4.8x", label: "Average ROAS on paid ads" },
+      { value: "#1 Rank", label: "Target keyword rankings" }
+    ],
+    deliverables: [
+      { title: "Technical & On-Page SEO", desc: "Complete site audits, schema markup, keyword architecture, and Core Web Vitals tuning." },
+      { title: "Targeted Paid Ads (Meta & Google)", desc: "Hyper-targeted campaigns with high-intent audience segmentation and A/B split testing." },
+      { title: "Conversion Funnel Optimization", desc: "Landing page CRO, heatmap tracking, and checkout funnel friction removal." },
+      { title: "Analytics & Telemetry Reporting", desc: "Transparent weekly dashboards tracking CAC, LTV, ROAS, and keyword rankings." }
+    ],
+    technologies: ["Google Ads", "Meta Ads", "Ahrefs", "Semrush", "Google Analytics 4", "Search Console"]
+  },
+  {
+    slug: "video-editing",
+    title: "Video Editing",
+    headline: "Dynamic, Engaging Video Content & Motion Graphics That Hook Viewers In Seconds",
+    description: "High-retention video editing for Reels, TikToks, YouTube, promotional ads, and motion graphics.",
+    longDescription: "Capture attention in the first 3 seconds with fast-paced, high-retention video editing. From viral short-form content to cinematic brand films and animated explainer videos, we craft narratives that hold attention and trigger action.",
+    tags: ["Reels & TikToks", "Brand Films", "Motion Graphics"],
     image: "/images/blog-holographic.jpg",
     metrics: [
-      { value: "60 FPS", label: "Silky smooth performance" },
-      { value: "+52%", label: "User engagement time" },
-      { value: "<50kb", label: "Ultra-lightweight Lottie files" }
+      { value: "85%", label: "Average watch-through rate" },
+      { value: "3.8M+", label: "Organic views generated" },
+      { value: "4K 60fps", label: "Ultra-HD quality export" }
     ],
     deliverables: [
-      { title: "Scroll-Driven Interactive Animations", desc: "Dynamic parallax effects, sticky feature reveals, and timeline scrub animations." },
-      { title: "3D Product Renders & WebGL Loops", desc: "Hyper-realistic hardware device rotations and interactive 3D camera controls." },
-      { title: "Lottie & Vector Micro-Animations", desc: "Interactive button loaders, celebration confetti, and dynamic status indicators." },
-      { title: "Promo Feature Motion Teasers", desc: "High-impact 4K social product launch videos and feature highlight loops." }
+      { title: "Short-Form Viral Reels & TikToks", desc: "Dynamic pacing, captions, sound design, sound effects, and kinetic hooks." },
+      { title: "Promotional & Commercial Ads", desc: "High-energy commercial video edits optimized for paid acquisition funnels." },
+      { title: "YouTube & Long-Form Video", desc: "Engaging storytelling, b-roll integration, chapter markers, and custom audio mixing." },
+      { title: "Motion Graphics & 3D Transitions", desc: "Logo stings, kinetic typography, lower thirds, and animated overlays." }
     ],
-    technologies: ["Framer Motion", "Spline", "Three.js", "After Effects", "Rive", "Lottie"]
+    technologies: ["Premiere Pro", "After Effects", "DaVinci Resolve", "CapCut Pro", "Audition"]
+  },
+  {
+    slug: "ecommerce-and-shopify",
+    title: "E-Commerce & Shopify",
+    headline: "High-Converting E-Commerce Stores & Custom Shopify Solutions Built to Scale Sales",
+    description: "Bespoke Shopify store setup, high-converting product pages, custom themes, and payment integrations.",
+    longDescription: "We build seamless, high-speed Shopify stores engineered for maximum average order value (AOV) and minimal cart abandonment. From bespoke theme development to custom app integrations and one-click checkouts, we build e-commerce engines that sell 24/7.",
+    tags: ["Shopify Plus", "Theme Customization", "CRO"],
+    image: "/images/project-sensor.jpg",
+    metrics: [
+      { value: "+42%", label: "Checkout conversion rate" },
+      { value: "<0.6s", label: "Instant page load speed" },
+      { value: "99.9%", label: "Uptime & transaction stability" }
+    ],
+    deliverables: [
+      { title: "Custom Shopify Store Build", desc: "Full theme setup, brand styling, collection hierarchies, and mobile optimization." },
+      { title: "Conversion-Focused Product Pages", desc: "High-converting PDPs with trust badges, sticky add-to-cart, reviews, and bundles." },
+      { title: "Payment & Shipping Integrations", desc: "Multi-currency checkout, local payment gateways, and automated fulfillment sync." },
+      { title: "App Ecosystem & Upsells", desc: "Automated email flows (Klaviyo), post-purchase upsells, and live chat support." }
+    ],
+    technologies: ["Shopify", "Liquid", "Klaviyo", "Next.js Commerce", "Stripe", "Figma"]
   }
 ];
 
@@ -435,36 +414,36 @@ export const PRICING_PLANS = [
 
 export const FAQ_ITEMS = [
   {
-    question: "What is included with each Framer template?",
-    answer: "Each template comes with a fully responsive design, editable components, and SEO-friendly structure ready to customize."
+    question: "What services does Brandhive.creatives offer?",
+    answer: "We provide end-to-end creative and digital services, including branding, graphic design, UI/UX design, website development, digital marketing, SEO, social media management, and AI-powered image and video content."
   },
   {
-    question: "Do I need coding skills to use your templates?",
-    answer: "No coding skills are required. The template is designed to be fully customizable directly through visual controls, intuitive components, and clear style tokens."
+    question: "Can you create a complete brand identity for my business?",
+    answer: "Yes. We can develop a complete visual identity, including logo design, brand colors, typography, social media assets, marketing materials, and other brand guidelines to create a consistent and professional presence."
   },
   {
-    question: "Can I use a template for multiple projects?",
-    answer: "Standard template purchases cover a single commercial production website. For multiple client websites, we offer multi-site licenses."
+    question: "Do you design and develop websites from scratch?",
+    answer: "Yes. We design and develop modern, responsive websites tailored to your brand and business goals. Our focus is on creating websites that look professional, provide a strong user experience, and are built to support conversions."
   },
   {
-    question: "Are the templates optimized for performance?",
-    answer: "Yes! All assets, images, and fonts are preloaded with modern WebP/AVIF formats, ensuring 95+ Google Lighthouse and Core Web Vitals scores."
+    question: "Can you manage our social media and digital marketing?",
+    answer: "Absolutely. We can handle your social media creative content, strategy, campaign management, digital advertising, and overall online presence to help your brand reach and engage the right audience."
   },
   {
-    question: "Do you offer support after purchase?",
-    answer: "Yes, we provide dedicated email and Discord/Slack support to help you set up, customize, and launch your website smoothly."
+    question: "Do you provide SEO services?",
+    answer: "Yes. Our SEO services focus on improving your website's visibility in search engines through strategies such as keyword optimization, on-page SEO, technical improvements, content optimization, and ongoing performance analysis."
   },
   {
-    question: "Can I integrate third-party tools with these templates?",
-    answer: "Yes, you can easily connect tools like Calendly, Stripe, HubSpot, Google Analytics, Typeform, and Mailchimp without any friction."
+    question: "Can you help improve an existing website or brand?",
+    answer: "Yes. You don't always need to start from scratch. We can audit your existing brand or website, identify areas for improvement, and redesign or optimize them to create a stronger, more modern, and effective digital presence."
   },
   {
-    question: "Do you offer customizations beyond the template?",
-    answer: "Yes, our studio offers bespoke custom design sprints, full branding packages, and custom Next.js/Framer development services."
+    question: "Do you offer AI-generated images and videos?",
+    answer: "Yes. We use AI-powered creative workflows to produce high-quality images, videos, marketing visuals, product content, and other creative assets while maintaining your brand's visual direction and consistency."
   },
   {
-    question: "Will my template receive updates?",
-    answer: "All customers receive lifetime free updates and new component additions as the design system expands."
+    question: "How does the Brandhive.creatives process work?",
+    answer: "We start by understanding your business, goals, audience, and requirements. From there, we develop the creative or digital strategy, move into design and development, gather your feedback, refine the work, and deliver the final solution ready for use."
   }
 ];
 

@@ -28,10 +28,11 @@ export default function ContactPage() {
   });
 
   const availableServices = [
-    'Product Design',
-    'Design Partnership',
-    'Landing page Design',
-    'Custom Services'
+    'Branding & Persona Development',
+    'Graphic Designing',
+    'Digital Marketing & SEO',
+    'Video Editing',
+    'E-Commerce & Shopify'
   ];
 
   const toggleService = (service) => {

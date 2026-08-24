@@ -60,7 +60,7 @@ export default function CtaBanner() {
             
             {/* Headline */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-tight mb-3">
-              Trusted by 1,200+ founders. <br />
+              Trusted by 100+ founders. <br />
               <span className="text-[#64748b] font-medium">Turning ideas into bold brands.</span>
             </h2>
 

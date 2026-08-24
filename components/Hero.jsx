@@ -201,10 +201,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-[42px] lg:text-[46px] font-bold tracking-tight text-zinc-900 leading-[1.14] mb-4 max-w-xl"
+            className="text-3xl sm:text-4xl md:text-[46px] lg:text-[52px] font-bold tracking-tight text-zinc-900 leading-[1.12] mb-4 max-w-2xl"
           >
-            Web & Brand Design <br />
-            For Ambitious Founders
+            Build a Brand <br className="hidden sm:inline" />
+            People Remember.
           </motion.h1>
 
           {/* Subtitle */}
@@ -212,9 +212,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm sm:text-base text-zinc-600 max-w-md font-normal leading-relaxed mb-8"
+            className="text-xs sm:text-sm md:text-base text-zinc-600 max-w-2xl font-normal leading-relaxed mb-8"
           >
-            We build conversion-driven websites and marketing that attract, engage, and convert.
+            Brandhive.creatives is a creative digital agency specializing in branding, graphic design, web development, UI/UX design, digital marketing, SEO, social media, and AI-powered content to help businesses stand out and grow.
           </motion.p>
 
           {/* CTA Buttons */}

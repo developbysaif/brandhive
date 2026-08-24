@@ -114,26 +114,20 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs text-zinc-600 font-medium">
               <li>
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors inline-flex items-center gap-1">
-                  <span>X (Twitter)</span>
-                  <ArrowUpRight className="w-3 h-3 text-zinc-400" />
-                </a>
-              </li>
-              <li>
-                <a href="https://framer.com" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors inline-flex items-center gap-1">
-                  <span>Framer</span>
-                  <ArrowUpRight className="w-3 h-3 text-zinc-400" />
-                </a>
-              </li>
-              <li>
-                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors inline-flex items-center gap-1">
-                  <span>Dribbble</span>
-                  <ArrowUpRight className="w-3 h-3 text-zinc-400" />
-                </a>
-              </li>
-              <li>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors inline-flex items-center gap-1">
+                <a href="https://www.facebook.com/brandhive.creatives" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors inline-flex items-center gap-1">
                   <span>Facebook</span>
+                  <ArrowUpRight className="w-3 h-3 text-zinc-400" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/brandhive.creatives/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors inline-flex items-center gap-1">
+                  <span>Instagram</span>
+                  <ArrowUpRight className="w-3 h-3 text-zinc-400" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/brand-hive-creatives/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors inline-flex items-center gap-1">
+                  <span>LinkedIn</span>
                   <ArrowUpRight className="w-3 h-3 text-zinc-400" />
                 </a>
               </li>
