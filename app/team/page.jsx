@@ -87,38 +87,31 @@ function TeamFlipCard({ member, idx }) {
             </div>
           </div>
 
-          {/* Social Links on Back Face */}
+          {/* Social Links on Back Face (LinkedIn & GitHub only) */}
           <div className="relative z-10 pt-4 border-t border-zinc-800 flex items-center justify-between">
-            <div className="flex items-center gap-3 text-xs text-zinc-400">
-              <a
-                href={member.x}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="hover:text-[#F6C53C] transition-colors font-medium"
-              >
-                X (Twitter)
-              </a>
-              <span>•</span>
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="hover:text-[#F6C53C] transition-colors font-medium"
-              >
-                LinkedIn
-              </a>
-              <span>•</span>
-              <a
-                href={member.dribbble}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="hover:text-[#F6C53C] transition-colors font-medium"
-              >
-                Dribbble
-              </a>
+            <div className="flex items-center gap-3 text-xs text-zinc-300">
+              {member.linkedin && (
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="hover:text-[#F6C53C] transition-colors font-medium flex items-center gap-1.5 bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-full border border-white/10"
+                >
+                  <span>LinkedIn</span>
+                </a>
+              )}
+              {member.github && (
+                <a
+                  href={member.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="hover:text-[#F6C53C] transition-colors font-medium flex items-center gap-1.5 bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-full border border-white/10"
+                >
+                  <span>GitHub</span>
+                </a>
+              )}
             </div>
 
             <div className="flex items-center gap-1 text-[10px] text-zinc-500">

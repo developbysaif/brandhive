@@ -471,62 +471,56 @@ export const FAQ_ITEMS = [
 export const TEAM_MEMBERS = [
   {
     name: "Sir Talha",
-    role: " Project manager, Digital marketor",
-    bio: "Ex-Stripe and Apple designer leading strategic vision, brand identity, and high-conversion design systems.",
+    role: "Project Manager & Digital Marketer",
+    bio: "Overseeing end-to-end digital delivery, client communications, high-ROI performance marketing campaigns, and growth strategies.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=85",
-    tags: ["Creative Direction", "Branding", "Strategy"],
-    x: "https://x.com",
+    tags: ["Project Management", "Digital Marketing", "SEO Strategy", "Campaign Growth"],
     linkedin: "https://linkedin.com",
-    dribbble: "https://dribbble.com"
+    github: "https://github.com"
   },
   {
     name: "Sir Saqib",
     role: "Full Stack Developer",
-    bio: "Obsessed with behavioral user psychology, cognitive load reduction, and conversion funnel optimization.",
+    bio: "Architecting robust full-stack web applications, scalable database systems, high-speed API endpoints, and clean microservices.",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=85",
-    tags: ["UX Research", "Information Architecture", "CRO"],
-    x: "https://x.com",
+    tags: ["Full Stack", "Next.js", "Node.js", "System Architecture"],
     linkedin: "https://linkedin.com",
-    dribbble: "https://dribbble.com"
+    github: "https://github.com"
   },
   {
-    name: "Wasi ahmad",
+    name: "Wasi Ahmad",
     role: "Brand Designer & Visual Artist",
-    bio: "Master of sub-second Web Vitals, Framer Motion choreography, and bulletproof Next.js component ecosystems.",
+    bio: "Crafting distinct brand identities, visual systems, high-impact marketing assets, and memorable aesthetic experiences.",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=85",
-    tags: ["Next.js", "WebGL", "Performance"],
-    x: "https://x.com",
+    tags: ["Brand Identity", "Visual Design", "Typography", "Art Direction"],
     linkedin: "https://linkedin.com",
-    dribbble: "https://dribbble.com"
+    github: "https://github.com"
   },
   {
     name: "Muhammad Saif",
     role: "Front End Developer",
-    bio: "Crafting fluid interactive 3D product loops, tactile spatial graphics, and buttery-smooth micro-interactions.",
+    bio: "Specializing in sub-second page performance, interactive React/Next.js interfaces, buttery-smooth Framer Motion choreography, and responsive UI.",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=85",
-    tags: ["3D Spline", "Three.js", "Motion Graphics"],
-    x: "https://x.com",
+    tags: ["Front End", "React / Next.js", "Tailwind CSS", "Framer Motion"],
     linkedin: "https://linkedin.com",
-    dribbble: "https://dribbble.com"
+    github: "https://github.com"
   },
   {
     name: "Rayyan",
     role: "Back End Developer",
-    bio: "Bridging the gap between Figma design tokens and production React components with mathematical precision.",
+    bio: "Building secure backend engines, database architecture, authentication protocols, RESTful & GraphQL APIs, and server infrastructure.",
     avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1000&q=85",
-    tags: ["Design Systems", "Figma Tokens", "UI Architecture"],
-    x: "https://x.com",
+    tags: ["Back End", "Node.js / Express", "PostgreSQL", "API Security"],
     linkedin: "https://linkedin.com",
-    dribbble: "https://dribbble.com"
+    github: "https://github.com"
   },
   {
     name: "Qamar",
-    role: "Figma Expert",
-    bio: "Translating complex technical products into bold, magnetic positioning and conversion-focused copy.",
+    role: "Figma Expert & UI Designer",
+    bio: "Mastering Figma design systems, interactive prototyping, user research, wireframing, and conversion-optimized UX flows.",
     avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=1000&q=85",
-    tags: ["Brand Positioning", "Conversion Copy", "Growth"],
-    x: "https://x.com",
+    tags: ["Figma Systems", "UI/UX Design", "Wireframing", "Prototyping"],
     linkedin: "https://linkedin.com",
-    dribbble: "https://dribbble.com"
+    github: "https://github.com"
   }
 ];
