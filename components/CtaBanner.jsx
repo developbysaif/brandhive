@@ -69,9 +69,9 @@ export default function CtaBanner() {
             </p>
 
             {/* Open for work badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 text-zinc-700 text-xs font-medium mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              <span>Open for work</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 text-xs text-zinc-700 mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#F6C53C]"></span>
+              <span>Available for new projects</span>
             </div>
 
             {/* Dual CTAs */}

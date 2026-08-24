@@ -22,7 +22,7 @@ export default function PricingSection() {
           className="text-center max-w-2xl mx-auto mb-12 sm:mb-16"
         >
           <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-3">
-            <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
+            <span className="w-1.5 h-1.5 rounded-[2px] bg-[#F6C53C]"></span>
             <span>Pricing</span>
           </div>
 

@@ -47,7 +47,7 @@ export default function ServiceDetailPage({ params }) {
         {/* Service Header */}
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-zinc-200 text-xs font-semibold text-zinc-700 mb-4 shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ea580c]"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#F6C53C]"></span>
             <span>{service.title}</span>
           </div>
 
@@ -63,17 +63,17 @@ export default function ServiceDetailPage({ params }) {
           <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/contact-us"
-              className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-black hover:bg-zinc-900 text-white text-xs sm:text-sm font-semibold shadow-md transition-all active:scale-95"
+              className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-black hover:bg-[#F6C53C] hover:text-black text-white text-xs sm:text-sm font-semibold shadow-md transition-all active:scale-95"
             >
               <span>Request {service.title}</span>
-              <span className="w-5 h-5 rounded-full bg-zinc-800 flex items-center justify-center text-zinc-300 group-hover:bg-zinc-700 transition-colors">
+              <span className="w-5 h-5 rounded-full bg-zinc-800 group-hover:bg-black/80 flex items-center justify-center text-zinc-300 group-hover:text-[#F6C53C] transition-colors">
                 <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
               </span>
             </Link>
 
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-800 text-xs sm:text-sm font-semibold shadow-sm transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-[#F6C53C]/15 hover:border-[#F6C53C]/80 border border-zinc-200 text-zinc-800 text-xs sm:text-sm font-semibold shadow-sm transition-all"
             >
               <span>View Case Studies</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400" />
@@ -87,7 +87,7 @@ export default function ServiceDetailPage({ params }) {
             {service.metrics.map((metric, i) => (
               <div
                 key={i}
-                className="rounded-[24px] bg-white border border-zinc-200/90 p-6 shadow-sm flex flex-col justify-between"
+                className="rounded-[24px] bg-white border border-zinc-200/90 p-6 shadow-sm flex flex-col justify-between hover:border-[#F6C53C]/70 transition-colors"
               >
                 <span className="text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight mb-1">
                   {metric.value}
@@ -124,7 +124,7 @@ export default function ServiceDetailPage({ params }) {
           <div className="mb-20">
             <div className="mb-8">
               <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-2">
-                <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
+                <span className="w-1.5 h-1.5 rounded-[2px] bg-[#F6C53C]"></span>
                 <span>Deliverables</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900">
@@ -136,10 +136,10 @@ export default function ServiceDetailPage({ params }) {
               {service.deliverables.map((item, idx) => (
                 <div
                   key={idx}
-                  className="rounded-[24px] bg-white border border-zinc-200/90 p-6 sm:p-7 shadow-sm hover:border-zinc-300 transition-all flex flex-col justify-between"
+                  className="rounded-[24px] bg-white border border-zinc-200/90 p-6 sm:p-7 shadow-sm hover:border-[#F6C53C]/80 transition-all flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-8 h-8 rounded-full bg-[#ea580c]/10 text-[#ea580c] flex items-center justify-center font-bold text-xs mb-4">
+                    <div className="w-8 h-8 rounded-full bg-[#F6C53C]/30 text-black flex items-center justify-center font-bold text-xs mb-4">
                       0{idx + 1}
                     </div>
                     <h3 className="text-base font-bold text-zinc-900 mb-2">
@@ -182,7 +182,7 @@ export default function ServiceDetailPage({ params }) {
           <div className="flex items-center justify-between mb-10">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-1">
-                <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
+                <span className="w-1.5 h-1.5 rounded-[2px] bg-[#F6C53C]"></span>
                 <span>Case Studies</span>
               </div>
               <h3 className="text-2xl font-bold tracking-tight text-zinc-900">

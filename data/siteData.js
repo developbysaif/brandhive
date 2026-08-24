@@ -174,6 +174,27 @@ export const SERVICES = [
       { title: "App Ecosystem & Upsells", desc: "Automated email flows (Klaviyo), post-purchase upsells, and live chat support." }
     ],
     technologies: ["Shopify", "Liquid", "Klaviyo", "Next.js Commerce", "Stripe", "Figma"]
+  },
+  {
+    slug: "web-development",
+    title: "Web Development",
+    headline: "Fast, Scalable & High-Converting Modern Websites Built With Next.js & React",
+    description: "Custom full-stack web development, interactive user interfaces, animations, CMS integration, and SEO-optimized architecture.",
+    longDescription: "We build blazing-fast, responsive web applications and websites that combine modern aesthetic design with robust backend engineering. From performant Next.js apps to headless CMS architectures and conversion-optimized landing pages, we build web solutions engineered for scale.",
+    tags: ["Next.js / React", "Full-Stack Web", "Responsive & Fast"],
+    image: "/images/services-light.jpg",
+    metrics: [
+      { value: "100%", label: "Responsive & mobile-first" },
+      { value: "<0.5s", label: "Page load speed (99+ PageSpeed)" },
+      { value: "100%", label: "SEO & accessibility compliant" }
+    ],
+    deliverables: [
+      { title: "Custom Web Application & Architecture", desc: "Full-stack development using Next.js, React, Tailwind CSS, and scalable API integrations." },
+      { title: "Responsive & Interactive UI/UX", desc: "Pixel-perfect mobile, tablet, and desktop responsiveness with smooth 60fps micro-animations." },
+      { title: "CMS & Database Integration", desc: "Seamless content management via headless CMS, Sanity, Strapi, or custom database pipelines." },
+      { title: "Performance & Core Web Vitals", desc: "Deep optimization achieving 95+ Google PageSpeed score, lazy loading, and edge caching." }
+    ],
+    technologies: ["Next.js", "React", "Tailwind CSS", "JavaScript", "TypeScript", "Node.js", "Framer Motion", "Vercel"]
   }
 ];
 

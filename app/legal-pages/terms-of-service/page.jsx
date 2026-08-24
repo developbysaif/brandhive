@@ -158,7 +158,7 @@ export default function TermsOfServicePage() {
               13. Contact
             </h2>
             <p className="text-zinc-600">
-              If you have questions about these Terms, reach us at: <a href="mailto:brandhive.creatives@gmail.com" className="text-[#ea580c] hover:underline font-medium">brandhive.creatives@gmail.com</a>
+              If you have questions about these Terms, reach us at: <a href="mailto:brandhive.creatives@gmail.com" className="text-[#F6C53C] hover:underline font-bold">brandhive.creatives@gmail.com</a>
             </p>
           </div>
 

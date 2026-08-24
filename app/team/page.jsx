@@ -93,7 +93,7 @@ export default function TeamPage() {
                         alt={member.name}
                         className="w-14 h-14 rounded-2xl object-cover border-2 border-white shadow-sm group-hover:scale-105 transition-transform"
                       />
-                      <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white" />
+                      <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-[#F6C53C] border-2 border-white shadow-sm" />
                     </div>
 
                     <div>
@@ -170,7 +170,7 @@ export default function TeamPage() {
         >
           <div className="text-center max-w-xl mx-auto mb-10">
             <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-2">
-              <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
+              <span className="w-1.5 h-1.5 rounded-[2px] bg-[#F6C53C]"></span>
               <span>Our Principles</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900">
@@ -182,10 +182,10 @@ export default function TeamPage() {
             {principles.map((p, i) => (
               <div
                 key={i}
-                className="rounded-[28px] bg-white border border-zinc-200/90 p-7 sm:p-8 shadow-sm flex flex-col justify-between"
+                className="rounded-[28px] bg-white border border-zinc-200/90 p-7 sm:p-8 shadow-sm flex flex-col justify-between hover:border-[#F6C53C]/80 transition-colors"
               >
                 <div>
-                  <div className="w-9 h-9 rounded-xl bg-[#ea580c]/10 flex items-center justify-center mb-5">
+                  <div className="w-9 h-9 rounded-xl bg-[#F6C53C]/20 flex items-center justify-center mb-5">
                     {p.icon}
                   </div>
                   <h3 className="text-base font-bold text-zinc-900 mb-2">
@@ -206,13 +206,13 @@ export default function TeamPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="rounded-[32px] sm:rounded-[40px] bg-[#09090b] text-white p-8 sm:p-12 md:p-14 relative overflow-hidden border border-zinc-800 shadow-2xl mb-16 sm:mb-24"
+          className="rounded-[32px] sm:rounded-[40px] bg-[#09090b] text-white p-8 sm:p-12 md:p-14 relative overflow-hidden border border-zinc-800 shadow-2xl mb-16 sm:mb-24 hover:border-[#F6C53C]/50 transition-colors"
         >
           <div className="absolute inset-0 opacity-15 pointer-events-none hero-dot-pattern" />
           
           <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <span className="text-xs uppercase tracking-wider font-semibold text-[#ea580c] block mb-2">
+              <span className="text-xs uppercase tracking-wider font-semibold text-[#F6C53C] block mb-2">
                 We're Growing
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">

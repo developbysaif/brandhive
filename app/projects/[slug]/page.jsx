@@ -36,9 +36,9 @@ export default function ProjectDetailPage({ params }) {
 
         {/* Project Header */}
         <div className="mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-zinc-200 text-xs text-zinc-600 mb-4 shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ea580c]"></span>
-            <span>{project.category}</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200/80 text-xs font-semibold text-zinc-700 mb-4 shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#F6C53C]"></span>
+            <span>Case Study</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-4">
@@ -65,9 +65,9 @@ export default function ProjectDetailPage({ params }) {
           </div>
           <div>
             <span className="text-zinc-500 block mb-1">Status</span>
-            <span className="font-semibold text-emerald-600 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              Completed & Live
+            <span className="font-semibold text-zinc-900 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#F6C53C]"></span>
+              <span>Live & Deployed</span>
             </span>
           </div>
         </div>
@@ -122,8 +122,8 @@ export default function ProjectDetailPage({ params }) {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {project.results.map((res, i) => (
-                  <div key={i} className="p-5 rounded-2xl bg-white border border-zinc-200 shadow-sm">
-                    <CheckCircle2 className="w-5 h-5 text-[#ea580c] mb-2" />
+                  <div key={i} className="p-5 rounded-2xl bg-white border border-zinc-200 shadow-sm hover:border-[#F6C53C]/80 transition-colors">
+                    <CheckCircle2 className="w-5 h-5 text-[#F6C53C] mb-2" />
                     <p className="text-xs text-zinc-700 font-medium leading-relaxed">
                       {res}
                     </p>

@@ -32,7 +32,8 @@ export default function ContactPage() {
     'Graphic Designing',
     'Digital Marketing & SEO',
     'Video Editing',
-    'E-Commerce & Shopify'
+    'E-Commerce & Shopify',
+    'Web Development'
   ];
 
   const toggleService = (service) => {

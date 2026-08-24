@@ -18,8 +18,8 @@ export default function StatsSection() {
           className="mb-10 sm:mb-14"
         >
           <div className="inline-flex items-center gap-2 text-xs font-medium text-zinc-600 mb-3">
-            <span className="w-1.5 h-1.5 rounded-[2px] bg-[#ea580c]"></span>
-            <span>Impact</span>
+            <span className="w-1.5 h-1.5 rounded-[2px] bg-[#F6C53C]"></span>
+            <span>Impact & Numbers</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-[1.15]">

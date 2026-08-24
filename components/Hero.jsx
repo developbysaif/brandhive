@@ -192,7 +192,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200/80 text-xs text-zinc-800 mb-6 shadow-sm"
           >
-            <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+            <span className="w-2 h-2 rounded-full bg-[#F6C53C] inline-block shadow-[0_0_8px_rgba(246,197,60,0.6)]"></span>
             <span className="font-medium">Open for Work</span>
           </motion.div>
 
